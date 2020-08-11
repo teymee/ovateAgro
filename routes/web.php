@@ -115,3 +115,7 @@ Route::delete('/editors/{user}',       'EditorController@destroy')->middleware( 
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

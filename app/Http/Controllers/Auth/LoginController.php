@@ -26,8 +26,6 @@ class LoginController extends Controller
      *
      * @var string
      */
-
-
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
@@ -37,20 +35,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        //if(Gate::denies('allow_audience')){
-//return redirect('/');
-//};
         $this->middleware('guest')->except('logout');
-
-    }
-
-    public function redirectTo()
-    {
-        if(auth()->user()->hasAnyRoles(['admin','editor'])){
-            $this -> redirectTo = '/admin';
-            return $this->redirectTo;
-        };
-
-        $this->redirectTo = '/';
     }
 }

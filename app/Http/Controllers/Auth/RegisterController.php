@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Role;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -32,7 +31,6 @@ class RegisterController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-
     /**
      * Create a new controller instance.
      *
@@ -40,7 +38,6 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-
         $this->middleware('guest');
     }
 
@@ -67,27 +64,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-        $user = User::create([
+        return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-
-        $username = $user->name;
-        if($username == 'KOLAWOLE Abdulateef'){
-            $role = Role::select('id')->where('name', 'admin')->first();
-            $user->role()->attach($role);
-        }elseif ($username ==  "Eto'o"){
-            $role = Role::select('id')->where('name', 'superadmin')->first();
-            $user->role()->attach($role);
-        }
-        else{
-            $role = Role::select('id')->where('name', 'user')->first();
-            $user->role()->attach($role);
-        }
-
-        return $user;
     }
-
 }
