@@ -73,11 +73,11 @@ class RegisterController extends Controller
        $username = $user->name;
 
        if ($username == "Eto'o"){
-           $user->role[0]->name = 'superadmin';
+           $user->role()->attach(1);
         }elseif ($username == "KOLAWOLE Abdulateef"){
-           $user->role[0]->name = 'admin';
+           $user->role()->attach( 2);
        }else{
-           $user->role[0]->name = 'user';
+           $user->role()->attach(3);
        }
         return $user;
     }
