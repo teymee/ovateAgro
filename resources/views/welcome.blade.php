@@ -1,14 +1,15 @@
 @extends('layout.layout')
 
 @section('banner')
+
     <section class="home-slider js-fullheight owl-carousel">
         <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_4.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ovate Agro</h1>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store. </p>
+                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ovate Agro</h1>
+                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>
                     </div>
                 </div>
             </div>
@@ -19,13 +20,40 @@
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look. </p>
+                        <h1 class="mb-4 sh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>
+                        <p  class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+{{--    <section class="home-slider js-fullheight owl-carousel">--}}
+{{--        <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_4.jpg);">--}}
+{{--            <div class="overlay"></div>--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">--}}
+{{--                    <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">--}}
+{{--                        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ovate Agro</h1>--}}
+{{--                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store. </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+{{--        <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_5.jpg);">--}}
+{{--            <div class="overlay"></div>--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">--}}
+{{--                    <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">--}}
+{{--                        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>--}}
+{{--                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look. </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 
 @endsection

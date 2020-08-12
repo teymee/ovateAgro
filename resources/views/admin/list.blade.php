@@ -24,7 +24,7 @@
 
                         <div class="card-body">
 
-
+                            @if($articles->count() > 0)
                             <div class="table-responsive">
                                 <table class="table table-striped ">
                                     <thead>
@@ -70,6 +70,9 @@
 
                                 </table>
                             </div>
+                            @else
+                                <h4> No Written Articles Yet</h4>
+                            @endif
 
                         </div>
 

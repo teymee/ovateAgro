@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
 
-
+                    @if($editors->count() > 0)
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -79,7 +79,9 @@
 
                         </table>
                     </div>
-
+                    @else
+                        <h4> No Updated Editors Yet</h4>
+                    @endif
 
 
 

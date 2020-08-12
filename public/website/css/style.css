@@ -5,7 +5,14 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 680px) {
+    .fh, .sh{
+        font-size: 50px !important;
+    }
+
+    .p{
+        font-size: 15px !important;
+    }
 
     #blog-banner {
         background-image: url('website/images/bg_34.jpg');

@@ -15,6 +15,7 @@ class UserController extends Controller
 
         if($currentUser == 'superadmin'){
             $users = User::latest()->get();
+//            return $users;
 
             return view('admin.users_list',
                 [

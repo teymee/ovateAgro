@@ -23,62 +23,67 @@
             <div class="card">
                 <div class="card-body">
 
-
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th>  </th>
-                                <th> Name </th>
-                                <th> Email  </th>
-                                <th> Role </th>
-                                <th> Joined </th>
-                                <th style="text-align: center"> Upgrade to Editor </th>
-
-                                <th style="text-align: center"> Delete </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach($users as $user)
+                    @if($users->count() > 0)
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
                                 <tr>
+                                    <th>  </th>
+                                    <th> Name </th>
+                                    <th> Email  </th>
+                                    <th> Role </th>
+                                    <th> Joined </th>
+                                    <th style="text-align: center"> Upgrade to Editor </th>
 
-                                    <td class="py-1">
-
-                                        <img src="{{asset('/storage/'.$user->avatar)}}" alt="image" />
-                                    </td>
-                                    <td> {{$user->name}} </td>
-                                    <td style="font-weight: bold">
-                                        {{$user->email}}
-                                    </td>
-                                    <td>
-                                        {{$user->role[0]->name}}
-                                    </td>
-                                    <td> {{$user->created_at->format('d M, Y')}}</td>
-                                    {{--                                <td style="text-align: center"><a href="/admin/{{$user->id}}/edit"> <i class="mdi mdi-upload "></i></a> </td>--}}
-                                    <td style="text-align: center">
-                                        <form action="/users/{{$user->id}}" method="POST">
-                                            @csrf
-                                            @method('PUT')
-                                            <button style="border: none; background-color: transparent" type="submit"><i style="color: blue" class="mdi mdi-upload" ></i></button>
-                                        </form>
-                                    </td>
-                                    <td style="text-align: center">
-                                        <form action="/users/{{$user->id}}" method="POST">
-                                            @csrf
-                                            @method('delete')
-                                            <button style="border: none; background-color: transparent" type="submit"><i style="color: blue" class="mdi mdi-delete" ></i></button>
-                                        </form>
-                                    </td>
+                                    <th style="text-align: center"> Delete </th>
                                 </tr>
-                            @endforeach
+                                </thead>
+                                <tbody>
+
+                                @foreach($users as $user)
+                                    <tr>
+
+                                        <td class="py-1">
+
+                                            <img src="{{asset('/storage/'.$user->avatar)}}" alt="image" />
+                                        </td>
+                                        <td> {{$user->name}} </td>
+                                        <td style="font-weight: bold">
+                                            {{$user->email}}
+                                        </td>
+                                        <td>
+                                            {{$user->role[0]->name}}
+                                        </td>
+                                        <td> {{$user->created_at->format('d M, Y')}}</td>
+                                        {{--                                <td style="text-align: center"><a href="/admin/{{$user->id}}/edit"> <i class="mdi mdi-upload "></i></a> </td>--}}
+                                        <td style="text-align: center">
+                                            <form action="/users/{{$user->id}}" method="POST">
+                                                @csrf
+                                                @method('PUT')
+                                                <button style="border: none; background-color: transparent" type="submit"><i style="color: blue" class="mdi mdi-upload" ></i></button>
+                                            </form>
+                                        </td>
+                                        <td style="text-align: center">
+                                            <form action="/users/{{$user->id}}" method="POST">
+                                                @csrf
+                                                @method('delete')
+                                                <button style="border: none; background-color: transparent" type="submit"><i style="color: blue" class="mdi mdi-delete" ></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
 
 
-                            </tbody>
+                                </tbody>
 
-                        </table>
-                    </div>
+                            </table>
+                        </div>
+                    @else
+                        <h4> No Registered User's Yet</h4>
+                        @endif
+
+
 
 
 
