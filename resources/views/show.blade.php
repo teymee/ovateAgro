@@ -7,7 +7,7 @@
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                 <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                     <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Articles</span></p>
-                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> {{$article->title}}</h1>
+                    <h1 class="inside1 mb-3 bread " data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> {{$article->title}}</h1>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-8 ftco-animate">
 
-                    <h2 class="mb-3 font-weight-bold">{{$article->title}}</h2>
+                    <h2 class="inside1 mb-3 ">{{$article->title}}</h2>
 
 
                     <article>
@@ -70,7 +70,7 @@
 
                                     <p>{{$comment->body}}</p>
                                     <div class="meta">{{$comment->created_at->format('d M Y')}}</div>
-                                   
+
                                 </div>
                             </li>
 

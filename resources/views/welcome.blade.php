@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4 sh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>
+                        <h1 class="eoa mb-4 " data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>
                         <p  class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look.</p>
                     </div>
                 </div>
