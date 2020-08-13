@@ -20,7 +20,7 @@
         font-weight: bold !important;
     }
 
-    .slider-item1 {
+    .slider-item {
         overflow-y:scroll !important;
         position:relative !important;
         height: 100% !important;
