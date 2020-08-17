@@ -139,7 +139,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        JD\Cloudder\CloudderServiceProvider::class  ,
+//        JD\Cloudder\CloudderServiceProvider::class  ,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -191,7 +191,7 @@ return [
     */
 
     'aliases' => [
-        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+//        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
