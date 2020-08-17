@@ -68,8 +68,12 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
 
+
         "post-install-cmd": [
-            "ln -sr storage/app/public public/storage"
+            "ln -sr storage/app/public public/storage",
+            "php artisan clear-compiled",
+            "php artisan optimize",
+            "chmod -R 775 public/"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
