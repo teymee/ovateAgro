@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "backpack/crud": "^4.1",
         "backpack/filemanager": "^1.1",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
@@ -70,10 +71,7 @@
 
 
         "post-install-cmd": [
-            "ln -sr storage/app/public public/storage",
-            "php artisan clear-compiled",
-            "php artisan optimize",
-            "chmod -R 775 public/"
+            "ln -sr storage/app/public public/storage"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
