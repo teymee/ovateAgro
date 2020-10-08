@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->text('excerpt');
             $table->text('body');
             $table->string('images')->nullable();
+            $table->string('imagesId')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

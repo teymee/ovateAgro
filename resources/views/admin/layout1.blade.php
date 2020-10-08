@@ -208,12 +208,12 @@
                     <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
                        aria-expanded="false">
                         <div class="nav-profile-img">
-                            <img src="{{asset('/storage/'.auth()->user()->avatar)}}" alt="image">
+                            <img src="{{asset('uploads/'.auth()->user()->avatar)}}" alt="image">
                             <span class="availability-status online"></span>
                         </div>
-                        <div class="nav-profile-text">
-                            <p class="mb-1 text-black">{{auth()->user()->name}}</p>
-                        </div>
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">{{auth()->user()->name}}</p>
+                            </div>
                     </a>
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
 
@@ -368,7 +368,7 @@
                 <li class="nav-item nav-profile">
                     <a href="#" class="nav-link">
                         <div class="nav-profile-image">
-                            <img src="{{asset('/storage/'.auth()->user()->avatar)}}" alt="profile">
+                            <img src="{{asset('uploads/'.auth()->user()->avatar)}}" alt="profile">
                             <span class="login-status online"></span>
                             <!--change to offline or busy as needed-->
                         </div>

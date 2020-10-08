@@ -171,7 +171,7 @@
 {{--            </div>--}}
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <h2 class="ftco-heading-2">Have Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">Abeokuta, Nigeria</span></li>
@@ -185,7 +185,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
 
-                <p> Copyright &copy;<script>document.write(new Date().getFullYear()); </script> Site was made by Okorie Emmanuel <i class="icon-heart" aria-hidden="true"></i> </p>
+                <p> Copyright &copy;<script>document.write(new Date().getFullYear()); </script> Site was made by Okorie Emmanuel  </p>
 {{--                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--}}
 {{--                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>--}}
 {{--                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>--}}

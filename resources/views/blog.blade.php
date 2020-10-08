@@ -33,7 +33,9 @@
                     <div class="col-md-6">
                         <div  class="blog-entry ftco-animate">
                             <a href="/article/{{$article->id}}" class="img img-2"
-                               style="background-image: url({{asset("storage/". $article->images)}});"></a>
+                               {{-- REGULAR HOSTING --}}
+                               {{--{{asset('storage/'.$article->images )}}--}}
+                               style="background-image: url({{asset("uploads/". $article->images)}});"></a>
 {{--                            website/images/image_1.jpg--}}
                             <div class="text text-2 pt-2 mt-3">
                                 <span class="big">Ovate Agro</span>

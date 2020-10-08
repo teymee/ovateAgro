@@ -21,7 +21,11 @@
                 <div class="card-body">
 
                     <div class=" d-flex justify-content-center">
-                        <img src="{{asset('/storage/'.auth()->user()->avatar)}}" alt="profile" class="rounded-circle" width="300" height="250">
+                        {{-- REGULAR HOSTING--}}
+                        {{--    <img src="{{asset('/storage/'.auth()->user()->avatar)}}" alt="profile" class="rounded-circle" width="300" height="250">--}}
+                        {{-- CLOUDINARY--}}
+
+                        <img src="{{asset('uploads/'.auth()->user()->avatar)}}" alt="profile" class="rounded-circle" width="300" height="250">
                     </div>
 
                     <form class="forms-sample" method="POST" action="/profile/{{auth()->user()->id}}" enctype="multipart/form-data">

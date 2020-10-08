@@ -76,17 +76,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label>File upload</label>
-                            <input type="file" name="images" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                                <input type="text" name="images" class="form-control file-upload-info" disabled
-                                       placeholder="Upload Image">
-                                <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                          </span>
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <label for="exampleTextarea1">Body</label>
@@ -103,6 +93,30 @@
                             @enderror
                         </div>
 
+                        <br><br>
+                        <div class="form-group">
+                            <label>File upload</label>
+                            <input type="file" name="images" class="file-upload-default">
+                            <div class="input-group col-xs-12">
+                                <input type="text" name="images" class="form-control file-upload-info" disabled
+                                       placeholder="Upload Image">
+                                <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
+                          </span>
+                            </div>
+                        </div>
+
+                        <div>
+                            {{-- REGULAR HOSTING--}}
+                            {{--                                    <img src="{{asset('storage/'.$product->images)}}" alt="" style ="max-width:350px; max-height:300px;">--}}
+                            {{-- CLOUDINARY--}}
+                            <img src="{{asset('uploads/'.$articles->images)}}" class="img-responsive" style ="max-width:350px; max-height:300px;" >
+
+
+
+                        </div>
+
+                        <br><br><br>
 
                         <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                         <button class="btn btn-light">Cancel</button>

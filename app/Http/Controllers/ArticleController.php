@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 use App\Article;
 use App\Comment;
+use App\Product;
 use App\Tag;
 use App\User;
 use Illuminate\Http\Request;
-
+use JD\Cloudder\Facades\Cloudder;
 
 
 class ArticleController extends Controller
@@ -37,20 +38,62 @@ class ArticleController extends Controller
 
     }
 
-    public function store(Article $article){
-
-//        dd(request('images'));
-        $this->validateRequest();
-        if(request()->hasFile('images')){
-            $fileNameToStore = request('images')->store('article_images', 'public');
-        }else{
-            $fileNameToStore = 'article_images/noimages.png';
-        }
+    public function store(Article $article, Request $request){
 
 
+        //REGULAR HOSTING
+        //        dd(request('images'));
+//        $this->validateRequest();
+//        if(request()->hasFile('images')){
+//            $fileNameToStore = request('images')->store('article_images', 'public');
+//        }else{
+//            $fileNameToStore = 'article_images/noimages.png';
+//        }
+//
+//
+//
+//        $article = new Article(request(['title', 'excerpt', 'body', 'images']));
+//        $article->user_id = auth()->user()->id;
+//        $article -> images = $fileNameToStore;
+//
+//
+//        $article->save();
+//
+//        $article->tag()->attach(request('tags'));
+//
+//        return redirect('/blog');
+//
+
+
+
+
+        //CLOUDINARY
+
+        $images = $request->file('images');
+
+        $name = $request->file('images')->getClientOriginalName();
+
+        $image_name = $request->file('images')->getRealPath();
+
+        Cloudder::upload($image_name, null);
+
+        list($width, $height) = getimagesize($image_name);
+
+        $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+        $imageId= Cloudder::getPublicId();
+        //save to uploads directory
+        $images->move(public_path("uploads"), $name);
+
+        //Save images
+//        $this->saveImages($request, $image_url);
         $article = new Article(request(['title', 'excerpt', 'body', 'images']));
+
+        $article->images = $request->file('images')->getClientOriginalName();
+        $article->imagesId = $imageId;
+//        $product->image_url = $image_url;
+
         $article->user_id = auth()->user()->id;
-        $article -> images = $fileNameToStore;
+      
 
 
         $article->save();
@@ -58,6 +101,12 @@ class ArticleController extends Controller
         $article->tag()->attach(request('tags'));
 
         return redirect('/blog');
+
+
+
+
+
+
 
     }
 
@@ -98,7 +147,8 @@ class ArticleController extends Controller
             'title'   => 'required',
             'excerpt' => 'required',
             'body'    => 'required',
-            'images'  => 'nullable',
+//            'images'  => 'nullable',
+            'images'=>'nullable|mimes:jpeg,bmp,jpg,png|between:1, 6000',
             'tags'    => 'exists:tags,id'
     ]);
     }

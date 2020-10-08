@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use JD\Cloudder\Facades\Cloudder;
 
 class AdminController extends Controller
 {
@@ -57,18 +58,62 @@ class AdminController extends Controller
 
     }
 
-    public function update(Article $article)
+    public function update(Article $article, Request $request)
     {
+                    //REGULAR HOSTING
+//        if(request()->hasFile('images')){
+//            $firstImage = $article->images;
+//            if($firstImage){
+//                Storage::delete('/public/'.$firstImage);
+//            }
+//            $image = request('images')->store('article_images', 'public');
+//            $article->images = $image;
+//
+//        }
+
+
+
+
+
+        //CLOUDINARY
+
+
 
         if(request()->hasFile('images')){
-            $firstImage = $article->images;
-            if($firstImage){
-                Storage::delete('/public/'.$firstImage);
-            }
-            $image = request('images')->store('article_images', 'public');
-            $article->images = $image;
+
+            Cloudder::destroyImage($article->imagesId);
+
+
+            $images = $request->file('images');
+
+            $name = $request->file('images')->getClientOriginalName();
+
+
+            $image_name = $request->file('images')->getRealPath();
+
+            Cloudder::upload($image_name, null);
+
+            list($width, $height) = getimagesize($image_name);
+
+            $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+            $imageId= Cloudder::getPublicId();
+            //save to uploads directory
+            $images->move(public_path("uploads"), $name);
+
+            //Save images
+
+
+
+            $article->images = $request->file('images')->getClientOriginalName();
+
+            $article->imagesId = $imageId;
+            $article->save();
+
+
 
         }
+
+
 
         $validateRequest=  request()->validate([
             'title'     => 'required',

@@ -1,7 +1,9 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div class="hero-wrap js-fullheight" style="background-image: url({{asset('storage/'.$article->images )}});" data-stellar-background-ratio="0.5">
+{{-- REGULAR HOSTING --}}
+{{--{{asset('storage/'.$article->images )}}--}}
+    <div class="hero-wrap js-fullheight" style="background-image: url({{asset('uploads/'.$article->images)}});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -129,7 +131,11 @@
                         @foreach($randomArticles as $randomArticle )
 
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url({{asset('/storage/'.$randomArticle->images)}});"></a>
+                            <a class="blog-img mr-4" style="
+                                /*REGULAR HOSTING*/
+                    {{-- {{asset('/storage/'.$randomArticle->images)}}--}}
+                                         /*CLOUDINARY*/
+                                background-image: url({{asset('uploads/'.$article->images)}});"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">{{$randomArticle->title}}</a></h3>
                                 <div class="meta">

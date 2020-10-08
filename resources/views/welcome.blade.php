@@ -169,6 +169,7 @@
         </div>
     </section>
 
+    @if($articles->count() > 0)
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
@@ -181,7 +182,10 @@
                     <div class="col-md-4">
                         <div  class="blog-entry ftco-animate">
                             <a href="/article/{{$article->id}}" class="img img-2"
-                               style="background-image: url({{asset("storage/". $article->images)}});"></a>
+                                                {{--REGULAR HOSTING--}}
+                                        {{--{{asset("storage/". $article->images)}}--}}
+
+                            {{-- CLOUDINARY--}}style="background-image: url({{asset('uploads/'.$article->images)}});"></a>
                             {{--                            website/images/image_1.jpg--}}
                             <div class="text text-2 pt-2 mt-3">
                                 <span class="big">Ovate Agro</span>
@@ -216,5 +220,6 @@
             </div>
         </div>
     </section>
+    @endif
 
 @endsection
