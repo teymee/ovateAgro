@@ -193,7 +193,7 @@
                                 <p class="mb-4">{{$article->excerpt}}</p>
                                 <div class="author mb-4 d-flex align-items-center">
                                     <a href="#" class="img"
-                                       style="background-image: url({{asset('/storage/'.$article->user->avatar)}}"></a>
+                                       style="background-image: url({{asset('uploads/'.$article->user->avatar)}}"></a>
                                     <div class="ml-3 info">
                                         <span>Written by</span>
                                         <h3><a href="#">{{ucfirst( $article->getAuthor($article->id))}}</a></h3>
