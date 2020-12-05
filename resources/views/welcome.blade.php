@@ -71,7 +71,8 @@
             </div>
             <div class="row">
                 <div class="col-md-4 ftco-animate">
-                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/vet.jpg);">
+                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
+                       style="background-image: url(website/images/agri-busines.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3>Farm Enterprise Planning & Management</h3>
@@ -79,7 +80,8 @@
                     </a>
                 </div>
                 <div class="col-md-4 ftco-animate">
-                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/irrigation.jpg);">
+                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
+                       style="background-image: url(website/images/soil-sampling.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3> Soil Sampling & testing</h3>
@@ -88,7 +90,8 @@
                     </a>
                 </div>
                 <div class="col-md-4 ftco-animate">
-                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/bg_3.jpg);">
+                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
+                       style="background-image: url(website/images/agri-media.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3>Agri Media & Innovations</h3>
@@ -96,7 +99,8 @@
                     </a>
                 </div>
                 <div class="col-md-4 ftco-animate">
-                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/bg_4.jpg);">
+                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
+                       style="background-image: url(website/images/farm-mech.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3>Farm Mechanisation </h3>
@@ -104,7 +108,8 @@
                     </a>
                 </div>
                 <div class="col-md-4 ftco-animate">
-                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/bg_5.jpg);">
+                    <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
+                       style="background-image: url(website/images/backyard.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3> Backyard Garden Set Up</h3>

@@ -8,8 +8,8 @@
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
                  data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ovate Agro</h1>
-                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>
+                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Events</h1>
+{{--                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
                 </div>
             </div>
         </div>

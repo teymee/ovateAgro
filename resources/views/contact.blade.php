@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div class="hero-wrap js-fullheight" style="background-image: url('website/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('website/images/contact.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
