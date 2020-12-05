@@ -3,17 +3,7 @@
 @section('banner')
 
     <section class="home-slider js-fullheight owl-carousel">
-        <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_4.jpg);">
-            <div class="overlay"></div>
-            <div class="container-fluid">
-                <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-                    <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
-                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">  Your one stop centre for quality farm inputs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <div class="slider-item js-fullheight" style="background-image:url(website/images/headline3.jpg);">
             <div class="overlay"></div>
@@ -22,6 +12,19 @@
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                         <h1 class="eoa mb-4 " data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="font-size: 32px"> Agribusiness Management</h1>
                         <p  class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_4.jpg);">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                    <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
+                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">  Your one stop centre for quality farm inputs.</p>
                     </div>
                 </div>
             </div>

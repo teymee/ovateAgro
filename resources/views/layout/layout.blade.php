@@ -41,7 +41,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/" style="font-size: 14px"><img src="{{asset("website/images/ovate-logo.png")}}" alt="">Ovate Agro Center</a>
+        <a class="navbar-brand" href="/" style="font-size: 14px"><img src="{{asset("website/images/ovate-logo.png")}}" alt="">Ovate Agro Centre</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
@@ -186,7 +186,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
 
-                <p> <span style="font-size: 20px; color: ghostwhite "><strong>Ovate Agro Center</strong></span>
+                <p> <span style="font-size: 20px; color: ghostwhite "><strong>Ovate Agro Centre</strong></span>
                     <br>Site made by <a href="http://teymee.herokuapp.com/" style="color:lawngreen" target="_blank">Teymee</a>
                     <br>Copyright &copy; <script>document.write(new Date().getFullYear()); </script></p>
 {{--                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--}}

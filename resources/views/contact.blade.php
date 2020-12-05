@@ -23,8 +23,9 @@
                     <h2 class="h4">Contact Information</h2>
                 </div>
                 <div class="w-100"></div>
-                <div class="col-md-3">
-                    <p><span>Address:</span> Abeokuta, Nigeria</p>
+                <div class="col-md-8">
+                    <p style="color: black"><span style="color: grey">Address:</span> Km  Abeokuta-Ibadan Exp way Beside SLAB,
+                        Camp Abeokuta  Ogun State Nigeria.</p>
                 </div>
                 <div class="col-md-3">
                     <p><span>Phone:</span> <a href="tel://+2348133097124">(234) 8133097124</a></p>
