@@ -41,7 +41,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">Ovate Agro</a>
+        <a class="navbar-brand" href="/" style="font-size: 14px"><img src="{{asset("website/images/ovate-logo.png")}}" alt="">Ovate Agro Center</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
@@ -174,9 +174,10 @@
                     <h2 class="ftco-heading-2">Have Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Abeokuta, Nigeria</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">(234) 8133097124</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ov8farms@yahoo.com</span></a></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text">Km  Abeokuta-Ibadan Exp way Beside SLAB,
+                                    Camp Abeokuta  Ogun State Nigeria.</span></li>
+                            <li><a href="tel://+2348133097124"><span class="icon icon-phone"></span><span class="text">(234) 8133097124</span></a></li>
+                            <li><a href="mailto:ov8farms@yahoo.com"><span class="icon icon-envelope"></span><span class="text">ov8farms@yahoo.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -185,7 +186,9 @@
         <div class="row">
             <div class="col-md-12 text-center">
 
-                <p> Copyright &copy;<script>document.write(new Date().getFullYear()); </script> Site was made by Okorie Emmanuel  </p>
+                <p> <span style="font-size: 20px; color: ghostwhite "><strong>Ovate Agro Center</strong></span>
+                    <br>Site made by <a href="http://teymee.herokuapp.com/" style="color:lawngreen">Teymee</a>
+                    <br>Copyright &copy; <script>document.write(new Date().getFullYear()); </script></p>
 {{--                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--}}
 {{--                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>--}}
 {{--                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>--}}

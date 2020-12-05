@@ -8,19 +8,19 @@
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Ovate Agro</h1>
-                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>
+                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
+                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">  Your one stop centre for quality farm inputs.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="slider-item js-fullheight" style="background-image:url(website/images/bg_5.jpg);">
+        <div class="slider-item js-fullheight" style="background-image:url(website/images/headline3.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="eoa mb-4 " data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Explore Our Aesthetics</h1>
+                        <h1 class="eoa mb-4 " data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="font-size: 32px"> Agribusiness Management</h1>
                         <p  class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Let’s beautify your homes,offices,giving it natural & heart melting look.</p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h2 class="mb-4">Agricultural Sectors</h2>
+                    <h2 class="mb-4">What we do</h2>
                 </div>
             </div>
             <div class="row">
@@ -71,7 +71,7 @@
                     <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/vet.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Veterinary</h3>
+                            <h3>Farm Enterprise Planning & Management</h3>
                         </div>
                     </a>
                 </div>
@@ -79,7 +79,7 @@
                     <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/irrigation.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Soil and Water Conservation</h3>
+                            <h3> Soil Sampling & testing</h3>
 
                         </div>
                     </a>
@@ -88,7 +88,7 @@
                     <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/bg_3.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Animal Husbandary</h3>
+                            <h3>Agri Media & Innovations</h3>
                         </div>
                     </a>
                 </div>
@@ -104,7 +104,8 @@
                     <a href="#" class="destination-entry d-flex align-items-center justify-content-center img" style="background-image: url(website/images/bg_5.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Soil Science</h3>
+                            <h3> Backyard Garden Set Up</h3>
+
 
                         </div>
                     </a>
@@ -114,7 +115,7 @@
                        style="background-image: url(website/images/pest.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Pest and Pathogens</h3>
+                            <h3>General Fumigations & Weed control</h3>
                         </div>
                     </a>
                 </div>

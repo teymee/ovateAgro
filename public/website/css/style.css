@@ -29,6 +29,7 @@
 
     .p{
         font-size: 13px !important;
+        color: white;
     }
 
     #blog-banner {
@@ -7641,7 +7642,7 @@ h1, h2, h3, h4, h5,
         left: 0;
         right: 0;
         background: #000000;
-        opacity: .3; }
+        opacity: .4; }
       .owl-carousel.home-slider .slider-item .slider-text {
         height: 750px; }
         @media (max-width: 767.98px) {
@@ -7915,7 +7916,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     top: -10px;
     left: -20px;
-    font-size: 60px;
+    font-size: 30px;
     font-family: "Abril Fatface", cursive;
     line-height: .8;
     z-index: -1;
