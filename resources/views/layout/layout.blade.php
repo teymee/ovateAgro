@@ -29,8 +29,11 @@
     <link rel="stylesheet" href="/website/css/style.css">
 
     <style>
-        @media (max-width: 480px) {
+        @media (max-width: 800px) {
+            .bannenr2{
+                background-image:url(website/images/mobile-headline.jpg) !important;
 
+            }
             #blog-banner {
                 background-image: url('website/images/bg_34.jpg');
             }

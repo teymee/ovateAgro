@@ -5,7 +5,7 @@
     <section class="home-slider js-fullheight owl-carousel">
 
 
-        <div class="slider-item js-fullheight" style="background-image:url(website/images/headline1.jpg);">
+        <div class="slider-item js-fullheight" style="background-image:url(website/images/agri-busines.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -18,7 +18,7 @@
         </div>
 
 
-        <div class="slider-item js-fullheight" style="background-image:url(website/images/headline2.jpg);">
+        <div class="slider-item bannenr2 js-fullheight" style="background-image:url(website/images/headline4.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
