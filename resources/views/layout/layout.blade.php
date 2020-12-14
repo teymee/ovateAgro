@@ -23,10 +23,21 @@
     <link rel="stylesheet" href="/website/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="/website/css/jquery.timepicker.css">
 
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.11/dist/css/uikit.min.css" />
 
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.11/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/website/css/flaticon.css">
     <link rel="stylesheet" href="/website/css/icomoon.css">
     <link rel="stylesheet" href="/website/css/style.css">
+
+
 
     <style>
         @media (max-width: 800px) {
@@ -50,8 +61,9 @@
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto" >
                 <li class="nav-item {{Request::path() === '/' ? 'active' : ' '}}"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item {{Request::path() === 'shop' ? 'active' : ' '}}"><a href="/shop" class="nav-link">Shop</a></li>
                 <li class="nav-item {{Request::path()  === 'blog' ? 'active' : ''}}"><a href="/blog" class="nav-link">Blog</a></li>
                 <li class="nav-item {{Request::path()  === 'events' ? 'active' : ''}}"><a href="/events" class="nav-link">Event</a></li>
 {{--                <li class="nav-item active dropdown">--}}
@@ -64,7 +76,8 @@
 {{--                </li>--}}
 {{--                <li class="nav-item{{Request::path()  === 'blog' ? 'active' : ''}}"><a href="/blog" class="nav-link">Blog</a></li>--}}
                 <li class="nav-item {{Request::path() === 'contact' ? 'active' : ''}}"><a href="/contact" class="nav-link">Contact</a></li>
-            </ul>
+
+
                 @auth()
 
                     <li class="nav-item dropdown" style="list-style: none;">
@@ -91,8 +104,14 @@
                 @else
                     <li  style="list-style: none; color: ghostwhite" class="nav-item {{Request::path() === '/' ? 'active' : ''}}"><a style=" color: white"href="/login" target="_blank" class="nav-link">Login</a></li>
                 @endauth
+                <li class="nav-item" style="list-style: none"><a href="/cart" class="nav-link"><i class="fas fa-shopping-cart ">
+                        </i><span class="badge badge-pill badge-success" style="font-size: 10px">{{\Cart::getContent()->count()}}</span></a>
+                </li>
 
-                {{--                <li class="nav-item dropdown">--}}
+            </ul>
+
+
+            {{--                <li class="nav-item dropdown">--}}
 {{--                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Post</a>--}}
 {{--                    <div class="dropdown-menu" aria-labelledby="dropdown04">--}}
 {{--                        <a class="dropdown-item" href="post-right-sidebar.html">Post with right sidebar</a>--}}
@@ -203,7 +222,8 @@
 
 
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#AFD557"/></svg></div>
 
 
 <script src="/website/js/jquery.min.js"></script>

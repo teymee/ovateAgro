@@ -180,9 +180,9 @@
     <!-- partial -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="/assets/images/logo.svg" alt="logo"/></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/assets/images/logo-mini.svg"
-                                                                           alt="logo"/></a>
+            <a class="navbar-brand brand-logo" href="/admin"><img src="/assets/images/ovate-logo.png" alt="logo" style="width: 70px; height: 70px"/></a>
+            <a class="navbar-brand brand-logo-mini" href="/admin"><img src="/assets/images/ovate-logo.png"
+                                                                           alt="logo" style="width: 70px; height: 70px"/></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -386,24 +386,43 @@
                         <i class="mdi mdi-home menu-icon"></i>
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/articles">
-                        <span class="menu-title"> Articles</span>
-                        <i class="mdi mdi-library-books menu-icon"></i>
-
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/events">
-                        <span class="menu-title"> Events</span>
-                        <i class=" mdi mdi-rss  menu-icon"></i>
-
-                    </a>
-                </li>
                 @can('onlyAdmin')
 
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <span class="menu-title">Products</span>
+                            <i class="menu-arrow"></i>
+                            <i class=" mdi mdi-bulletin-board  menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="/products/add_product">Add Product</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/products">View Products</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/shipping">
+                            <span class="menu-title">Shipping</span>
+                            <i class="mdi mdi-contacts menu-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+                            <span class="menu-title">Orders</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic1">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="/admin/pending">Pending Orders</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/delivered">Delivered Orders</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/users">
@@ -428,7 +447,26 @@
 
                         </a>
                     </li>
+
                 @endcan
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/articles">
+                        <span class="menu-title"> Articles</span>
+                        <i class="mdi mdi-library-books menu-icon"></i>
+
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/events">
+                        <span class="menu-title"> Events</span>
+                        <i class=" mdi mdi-rss  menu-icon"></i>
+
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/create">
                         <span class="menu-title">Create Article</span>
