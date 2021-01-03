@@ -71,6 +71,21 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="exampleFormControlSelect1">Agro Personality of the month</label>
+                            <select name="Agro_Person"  class="form-control form-control-lg" id="exampleFormControlSelect1"
+                                    style="@error('cat_id')
+                                        border-color:red;
+                                    @enderror">
+                                <option value="1"> Yes</option>
+                                <option value="0"> No</option>
+
+                            </select>
+                            @error('quantity')
+                            <p style="color:red"><small><strong>{{$message}}</strong></small></p>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
                             <label for="exampleTextarea1">Details</label>
                             <textarea
                                 class="form-control"

@@ -18,12 +18,14 @@ class WebsiteController extends Controller
             \Cart::clear();
         }
         $articles = Article::inRandomOrder()->take(3)->get();
+        $person = Event::where('Agro_Person' , true)->orderBy('created_at', 'desc')->first();
         $tags = Tag::all();
 
 
         return view('welcome',[
             'tags' => $tags,
-            'articles'   => $articles
+            'articles'   => $articles,
+            'person' => $person
         ]);
     }
 
@@ -54,7 +56,7 @@ class WebsiteController extends Controller
             \Cart::clear();
         }
 
-        $event = Event::latest()->paginate(3);
+        $event = Event::where('Agro_Person' , false)->orderBy('created_at', 'desc')->paginate(6);
         $tag = Tag::all()->take(6);
 
 

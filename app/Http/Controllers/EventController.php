@@ -34,6 +34,7 @@ class EventController extends Controller
         $requestValidation = request()->validate([
             'name' => 'required',
             'body' => 'required',
+            'Agro_Person' => 'required',
             'date' => 'required',
             'images' => 'nullable'
         ]);

@@ -178,6 +178,21 @@
         </div>
     </section>
 
+    <section class="monthly">
+        <h4 class="text-center ftco-animate mb-4"><i>Agro Person Of  {{date('F', strtotime($person->created_at))}} </i> </h4>
+        <div class="inner_monthly ftco-animate ">
+            <img src="{{asset("storage/". $person->images)}}"
+                 alt="" >
+
+            <div class="text ftco-animate">
+                <h5 class="mt-4"> <strong>{{$person->name}}</strong> </h5>
+                <p>{!! $person->body !!}</p>
+
+            </div>
+
+        </div>
+    </section>
+
     @if($articles->count() > 0)
     <section class="ftco-section">
         <div class="container">

@@ -28,6 +28,23 @@ body{
 }
 
 
+/*Person of the month*/
+.monthly{
+  margin-bottom: 100px !important;
+    margin-top: 100px !important;
+}
+
+.inner_monthly{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center !important;
+}
+
+.monthly img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50% !important;
+}
 
 
 /*LOGIN PAGE*/
@@ -47,6 +64,9 @@ body{
         display: none !important;
     }
 
+    .monthly .text{
+        font-size: 12px;
+    }
 }
 
 

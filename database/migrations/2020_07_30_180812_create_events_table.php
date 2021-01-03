@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->text('body');
             $table->string('date');
+            $table->boolean('Agro_Person');
             $table->string('images')->nullable();
             $table->timestamps();
         });
