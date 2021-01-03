@@ -120,9 +120,17 @@ Route::get('/payment/callback',       'PaymentController@handleGatewayCallback')
 
 //ADMIN ORDERS
 Route::get('/admin/pending',           'OrderController@pendingIndex')->middleware('auth', 'can:onlyAdmin');
-Route::get('/pending/{order}',         'OrderController@pendingShow')->middleware('auth', 'can:onlyAdmin');
+Route::get('/order_details/{order}',         'OrderController@orderDetails')->middleware('auth', 'can:onlyAdmin');
 Route::post('/request/{orders}',       'OrderController@deliveryRequest')->middleware('auth', 'can:onlyAdmin');
 Route::get('/admin/delivered',         'OrderController@deliveredIndex')->middleware('auth', 'can:onlyAdmin');
+Route::get('/admin/shippment',                'OrderController@shippmentIndex');
+Route::post('/shippment/{orders}',                'OrderController@shippmentRequest');
+
+//USER DASHBOARD
+Route::get('/myaccount' ,               'UserOrdersController@index')->middleware('auth');
+Route::get('/order/details/{id}' ,   'UserOrdersController@show')->middleware('auth');
+Route::get('/profile' ,   'UserProfileController@index')->middleware('auth');
+Route::put('/profile' ,   'UserProfileController@update')->middleware('auth');
 
 Auth::routes();
 

@@ -47,7 +47,7 @@
                         <hr>
                         <h4>&#8358; {{number_format($product->price)}}</h4>
 
-                        <p>{{$product->description}}</p>
+
 
                         <form action="/cart/{{$product->id}}" method="post">
                             @csrf
@@ -60,25 +60,26 @@
         </div>
 
 
-{{--        <div class="description">--}}
-{{--            <a href="" style="margin-right: 20px" class="active-link">Description</a>--}}
-{{--            <hr>--}}
+        <div class="description">
+            <a href="" style="margin-right: 20px" class="active-link">Description</a>
+            <hr>
 
-{{--            <h4 style="margin-top: 50px"><strong>ABOUT</strong></h4>--}}
-{{--            <p style="margin-top: 50px">Curabitur volutpat ligula ut tellus suscipit dolor. Vestibulum fermentum. Vivamus diam in accumsan dictum, laoreet sapien. Suspendisse a lorem ligula, sit amet, neque. Etiam rutrum. Donec pharetra pede. Sed vel nulla. Nullam pharetra volutpat.--}}
-{{--                Donec eleifend ut, pellentesque vel, dignissim erat ornare laoreet. Aenean sit amet dolor.</p>--}}
-{{--        </div>--}}
+            <h4 style="margin-top: 50px"><strong>ABOUT</strong></h4>
+            <p style="margin-top: 50px">{!! $product->description !!}</p>
+
+        </div>
 
 
-        <hr>
-        <h4>Related products</h4>
+        <hr style=" margin-top: 200px;">
 
-        <div class="row" style="margin-bottom: 100px">
+        <h4 class="rp-text" >Related products</h4>
+
+        <div class="row related_product" style="margin-bottom: 100px">
 
             @foreach($randoms as $product)
-                <div class="col-md-4">
+                <div class="col-4 col-sm-4">
                     <a href="/detail/{{$product->name}}">
-                        <img src={{asset('storage/'.$product->images)}} alt="" height="300" class="img">
+                        <img src="{{asset('storage/'.$product->images)}}" height="300" class="img" >
                         <div class="caption">
                             <h5><strong>{{$product->name}}</strong></h5>
                             <h6>&#8358; {{ number_format($product->price) }}</h6>
@@ -87,7 +88,7 @@
 
                 </div>
             @endforeach
-            <div class="col-md-4">
+            <div class="col-4 col-sm-4">
                 <a href="/detail">
                     <img src={{asset('website/images/spray.jpg')}} alt="" height="300" class="img">
                     <div class="caption">

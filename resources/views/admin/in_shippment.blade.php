@@ -68,7 +68,7 @@
         <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
                   <i class="mdi mdi-border-color "></i>
-                </span> Pending Orders </h3>
+                </span> Orders Currently in Shippment </h3>
         <nav aria-label="breadcrumb">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">
@@ -80,16 +80,16 @@
 
     <div class="row">
 
-        @if($pending->count() > 0)
-        <div class="col-12 grid-margin stretch-card">
-            <div class="card">
+        @if($shipping->count() > 0)
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
 
 
 
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title" style="margin-bottom: 50px">Pending Orders</h4>
+                                <h4 class="card-title" style="margin-bottom: 50px">Orders Currently being Shipped</h4>
 
                                 <div class="table-responsive">
                                     <table class="table table-hover">
@@ -102,13 +102,13 @@
                                             <th> State</th>
                                             <th>City</th>
                                             <th>View more</th>
-                                            <th>In Shippment</th>
+                                            <th>Delivered</th>
 
                                         </tr>
                                         </thead>
 
                                         <tbody>
-                                        @foreach($pending as $order)
+                                        @foreach($shipping as $order)
                                             <tr>
                                                 <td> {{$order->orderId}}</td>
                                                 <td>{{$order->fullname}}</td>
@@ -118,18 +118,15 @@
                                                 <td>{{$order->city}}</td>
                                                 <td style=" text-align: center" ><a  href="/order_details/{{$order->orderId}}" ><i style="color: blue; text-align: center"  class=" btn-icon mdi mdi-checkbox-multiple-blank"></i></a></td>
                                                 <td>
-                                                    <form action="/shippment/{{$order->orderId}}" method="POST">
+                                                    <form action="/request/{{$order->orderId}}" method="POST">
                                                         @csrf
 
                                                         <button style="border: none; background-color: transparent"
                                                                 type="submit">
-
                                                             <label class="switch">
-
-                                                                <input name="request" type="checkbox" >
+                                                                <input name="request" type="checkbox">
                                                                 <span  class="slider round"></span>
                                                             </label>
-                                                            {{--                                                                    <input type="checkbox" name="request" class="form-check-input">--}}
 
                                                         </button>
                                                     </form>
@@ -141,7 +138,7 @@
 
                                     </table>
                                 </div>
-                                {{$pending->links()}}
+                                {{$shipping->links()}}
                             </div>
 
                         </div>
@@ -149,12 +146,12 @@
                     </div>
 
 
+                </div>
+
             </div>
 
-        </div>
-
         @else
-            <h3 class=" d-flex justify-content-center">No Pending Orders</h3>
+            <h3 class=" d-flex justify-content-center">No Order Currently in Shippment</h3>
         @endif
     </div>
 

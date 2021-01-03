@@ -46,14 +46,12 @@
                                 <p> <strong style="margin-right: 10px">Address:</strong> {{$orders->address}} </p>
                                 <br>
 
-                                @if($orders->delivered == false)
-                                    <p> <strong style="margin-right: 10px">Date of Order:</strong> {{$orders->created_at->format('d M,Y')}} </p>
-                                @else
-                                    <p> <strong style="margin-right: 10px">Date of Delivery:</strong> {{$orders->updated_at->format('d M,Y')}} </p>
+                                    <p> <strong style="margin-right: 10px">Date of Order:</strong> {{$orders->created_at->format('d M, Y')}} </p>
+                                <br>
+                                @if($orders->status == "delivered")
+                                    <p> <strong style="margin-right: 10px">Date of Delivery:</strong> {{$orders->updated_at->format('d M, Y')}} </p>
                                 @endif
                                 <br>
-                                <p> <strong style="margin-right: 10px">Services:</strong> @if($orders->services == 1) Call within 24 hours of "Date of Order"
-                                    @else No service needed @endif</p>
 
                             </address>
                         </div>
@@ -78,7 +76,7 @@
 
                                             </thead>
                                             <tbody>
-                                            @foreach($contents as $content)
+                                            @foreach($orders->Ordered_products as $content)
                                                 <tr style="border-top:20px;">
                                                     <th  colspan="2"><span>{{$content->name}}</span></th>
                                                     <th>x{{$content->quantity}}</th>

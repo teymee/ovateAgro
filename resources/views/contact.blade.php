@@ -33,9 +33,7 @@
                 <div class="col-md-3">
                     <p><span>Email:</span> <a href="mailto:ov8farms@yahoo.com">ov8farms@yahoo.com</a></p>
                 </div>
-                <div class="col-md-3">
-                    <p><span>Website</span> <a href="#">yoursite.com</a></p>
-                </div>
+
             </div>
             <div class="row block-9">
                 <div class="col-md-6 order-md-last pr-md-5">

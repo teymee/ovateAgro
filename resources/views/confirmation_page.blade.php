@@ -52,7 +52,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($contents as $content)
+                            @foreach($contents->Ordered_products as $content)
                                 <tr style="border-top:20px;">
                                     <th  colspan="2"><span>{{$content->name}}</span></th>
                                     <th>x{{$content->quantity}}</th>
@@ -75,13 +75,13 @@
                             </tr>
                             <tr>
                                 <th colspan="3">shipping</th>
-                                <th><span>flat rate: &#8358;{{number_format($shippingFee)}}</span></th>
+                                <th><span>flat rate: &#8358;{{number_format($contents->shipping_cost)}}</span></th>
                             </tr>
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th scope="col" colspan="3">Total</th>
-                                <th scope="col">Total : &#8358;{{number_format(\Cart::getTotal()  + $shippingFee)}}</th>
+                                <th scope="col">Total : &#8358;{{number_format(\Cart::getTotal()  + $contents->shipping_cost)}}</th>
                             </tr>
                             </tfoot>
 
@@ -100,20 +100,20 @@
                         <ul>
 
                             <li>
-                                <p>order number</p><span>: {{$orders->orderId}}</span>
+                                <p>order number</p><span>: {{$contents->orderId}}</span>
                             </li>
 
 
 
                             <li>
-                                <p>Date</p><span>: {{$orders->created_at->format('M d, Y')}}</span>
+                                <p>Date</p><span>: {{$contents->created_at->format('M d, Y')}}</span>
                             </li>
 
                             <li>
-                                <p>Time</p><span>: {{$orders->created_at->format('h:i A')}}</span>
+                                <p>Time</p><span>: {{$contents->created_at->format('h:i A')}}</span>
                             </li>
                             <li>
-                                <p>total</p><span> : &#8358;{{number_format(\Cart::getTotal()+ $shippingFee)}}</span>
+                                <p>total</p><span> : &#8358;{{number_format(\Cart::getTotal()+ $contents->shipping_cost)}}</span>
                             </li>
                             <li>
                                 <p>Payment methord</p><span>: Check payments</span>
@@ -126,11 +126,11 @@
                         <h4>Billing Details</h4>
                         <ul>
                             <li>
-                                <p>Name</p><span>: {{$orders->fullname}}</span>
+                                <p>Name</p><span>: {{$contents->fullname}}</span>
                             </li>
 
                             <li>
-                                <p>Phone Number</p><span>: {{$orders->phone}}</span>
+                                <p>Phone Number</p><span>: {{$contents->phone}}</span>
                             </li>
 
                             <li>
@@ -138,10 +138,10 @@
                             </li>
 
                             <li>
-                                <p>city</p><span>: {{$orders->city}}</span>
+                                <p>city</p><span>: {{$contents->city}}</span>
                             </li>
                             <li>
-                                <p>Address</p><span>: {{$orders->address}}</span>
+                                <p>Address</p><span>: {{$contents->address}}</span>
                             </li>
 
                         </ul>

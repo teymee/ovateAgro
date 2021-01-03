@@ -21,12 +21,11 @@ class CreateOrdersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('state');
+            $table->string('shipping_cost');
             $table->string('city');
             $table->mediumText('address');
             $table->mediumText('extra')->nullable();
-            $table->string('services');
-            $table->longText('orders');
-            $table->boolean('delivered')->default(false);
+            $table->string('status')->default('request');
             $table->timestamps();
         });
     }

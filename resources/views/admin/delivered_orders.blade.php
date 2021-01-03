@@ -68,7 +68,7 @@
         <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
                   <i class="mdi mdi-border-color "></i>
-                </span> Add Product </h3>
+                </span> Delivered Orders </h3>
         <nav aria-label="breadcrumb">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">
@@ -118,7 +118,7 @@
                                                 <td>{{$order->state}}</td>
                                                 <td>{{$order->city}}</td>
                                                 <td>{{$order->updated_at->format('d M,Y')}}</td>
-                                                <td style=" text-align: center" ><a  href="/pending/{{$order->orderId}}" ><i style="color: blue; text-align: center"  class=" btn-icon mdi mdi-checkbox-multiple-blank"></i></a></td>
+                                                <td style=" text-align: center" ><a  href="/order_details/{{$order->orderId}}" ><i style="color: blue; text-align: center"  class=" btn-icon mdi mdi-checkbox-multiple-blank"></i></a></td>
 
 
 

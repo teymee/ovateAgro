@@ -33,9 +33,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/website/css/flaticon.css">
+    <link rel="stylesheet" href="/website/css/flaticon.css ">
     <link rel="stylesheet" href="/website/css/icomoon.css">
     <link rel="stylesheet" href="/website/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -81,10 +82,16 @@
                 @auth()
 
                     <li class="nav-item dropdown" style="list-style: none;">
-                        <a  style="color: ghostwhite" class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+
+                        <a  style="color: ghostwhite" class="nav-link dropdown-toggle"  id="dropdown" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Welcome  {{ucwords(strtolower(auth()->user()->name))}}</a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdown04" >
+                            <a class="dropdown-item" href="/myaccount" style="font-size: 13px">My Account</a>
+
+                            @can('allow_audience')
+                            <a class="dropdown-item" href="/admin" style="font-size: 13px">Dashboard</a>
+                            @endcan
                             <form action="/logout" method="post" >
                                 @csrf
                                 @method('POST')
@@ -94,10 +101,6 @@
                                     </button>
                                 </div>
                             </form>
-                            @can('allow_audience')
-                            <a class="dropdown-item" href="/admin" style="font-size: 13px">Dashboard</a>
-                            @endcan
-
                         </div>
                     </li>
 
@@ -225,6 +228,40 @@
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#AFD557"/></svg></div>
 
+<script>
+
+    var width = $(window).width();
+    if(width <= 800){
+        $(".total_page").removeClass("d-flex");
+        $(".top_menu").removeClass("col-md-3");
+        $(".bottom_menu").removeClass("col-md-10");
+        $(".top_menu", ".bottom_menu").addClass("col-md-12");
+    }else{
+        $(".total_page").addClass("d-flex");
+        $(".top_menu", ".bottom_menu").removeClass("col-md-12");
+        $(".top_menu").addClass("col-md-3");
+        $(".bottom_menu").addClass("col-md-10");
+    }
+
+    window.addEventListener('resize', function () {
+        var width = $(window).width();
+        if(width <= 800){
+            $(".total_page").removeClass("d-flex");
+            $(".top_menu").removeClass("col-md-3");
+            $(".bottom_menu").removeClass("col-md-10");
+            $(".top_menu", ".bottom_menu").addClass("col-md-12");
+        }else{
+            $(".total_page").addClass("d-flex");
+            $(".top_menu", ".bottom_menu").removeClass("col-md-12");
+            $(".top_menu").addClass("col-md-3");
+            $(".bottom_menu").addClass("col-md-10");
+        }
+
+    });
+
+
+</script>
+
 
 <script src="/website/js/jquery.min.js"></script>
 <script src="/website/js/jquery-migrate-3.0.1.min.js"></script>
@@ -243,6 +280,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="/website/js/google-map.js"></script>
 <script src="/website/js/main.js"></script>
-
+@yield('extra-js')
 </body>
 </html>

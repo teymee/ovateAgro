@@ -27,7 +27,7 @@
 
     <div class="container" style="margin-top: 100px; margin-bottom: 200px">
         <div class="d-flex justify-content-between">
-            <h6>Showing all {{$products->count()}}</h6>
+            <h6>Showing all {{$products->count()}} products</h6>
 
 {{--            <select name="" id="">--}}
 {{--                <option value="">Sort by</option>--}}
@@ -39,7 +39,7 @@
         <div class="row" style="margin-top: 50px">
 
             @foreach($products as $product)
-            <div class="col-md-4">
+            <div class=" col-sm-6 col-md-6 col-lg-4 ">
                 <a href="/detail/{{$product->name}}">
                     <img src={{asset('storage/'.$product->images)}} alt="" height="300" class="images">
                     <div class="caption">
@@ -49,10 +49,11 @@
                 </a>
 
             </div>
+
             @endforeach
 
 
-{{--            <div class="col-md-4">--}}
+{{--            <div class="col-md-6 col-lg-4">--}}
 {{--                <a href="/detail">--}}
 {{--                    <img src={{asset('website/images/spray.jpg')}} alt="" height="300" class="img">--}}
 {{--                    <div class="caption">--}}
@@ -63,7 +64,7 @@
 
 {{--            </div>--}}
 
-{{--            <div class="col-md-4">--}}
+{{--            <div class="col-md-6 col-lg-4">--}}
 {{--                <a href="/detail">--}}
 {{--                <img src={{asset('website/images/fertilizer.jpg')}} alt="" height="300" class="img">--}}
 {{--                <div class="caption">--}}

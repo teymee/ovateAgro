@@ -18,7 +18,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+    <link rel="shortcut icon" href="../../assets/images/ovate-logo.png" />
 </head>
 <body>
 <div class="container-scroller">
@@ -419,6 +419,7 @@
                         <div class="collapse" id="ui-basic1">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="/admin/pending">Pending Orders</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/shippment">Shipped Orders</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="/admin/delivered">Delivered Orders</a></li>
                             </ul>
                         </div>

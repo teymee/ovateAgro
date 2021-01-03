@@ -179,6 +179,7 @@ return [
         JD\Cloudder\CloudderServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        Contentful\Laravel\ContentfulServiceProvider::class,
 
     ],
 

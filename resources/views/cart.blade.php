@@ -1,7 +1,8 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div  class=" cart-hero hero-wrap js-fullheight" id="blog-banner" style="background-image: url('website/images/cart.jpg');  "
+    <div class=" cart-hero hero-wrap js-fullheight" id="blog-banner"
+         style="background-image: url('website/images/cart.jpg');  "
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -9,18 +10,19 @@
                  data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                     <h1 class="mb-3 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">Cart</h1>
-{{--                                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
+                    {{--                                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
                 </div>
             </div>
         </div>
     </div>
-<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#AFD557" fill-opacity="1" d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#AFD557" fill-opacity="1"
+              d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
 
-</svg>
-<div class="container text-center">
-    <h1 class="cart-title" style="margin-top: -190px; color: white;">Cart</h1>
-</div>
+    </svg>
+    <div class="container text-center">
+        <h1 class="cart-title" style="margin-top: -190px; color: white;">Cart</h1>
+    </div>
 
 @endsection
 
@@ -50,11 +52,96 @@
 
                     @endif
                     <br>
-{{--                        <h1 class="cart-title" style="margin-top: 100px; color: black;">Cart</h1>--}}
+                    {{--                        <h1 class="cart-title" style="margin-top: 100px; color: black;">Cart</h1>--}}
                     <h5 class="text-left" style="color: #AFD557"><strong>{{\Cart::getContent()->count()}} Item(s) in
                             Shopping Cart</strong>
                     </h5>
-                    <div class="table-responsive">
+                    <div class="cart_mobile">
+                        <table style="width:100%">
+                            @foreach($cartItems as $cartItem)
+                                <tr>
+
+                                    <td colspan="2" align="center">
+                                        <form action="/cart/{{$cartItem->id}}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button
+                                                style="color: red; border: none; background-color: transparent; font-size: 20px">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </form>
+                                        <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"
+                                             style="border-radius: 10px"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Product</td>
+                                    <td>{{$cartItem->name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Price</td>
+                                    <td>&#8358;{{number_format($cartItem->price )}}</td>
+
+                                </tr>
+                                <form class="media-body" action="/cart/{{$cartItem->id}}" method="post">
+                                    @csrf
+
+                                    <tr>
+                                        <td>Quantity</td>
+                                        <td><input type="number" min="1" value="{{$cartItem->quantity}}"
+                                                   name="quantity">
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td> &#8358;{{ number_format(\Cart::get($cartItem->id)->getPriceSum())}}</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2" align="center">
+
+                                            @method('put')
+                                            @csrf
+                                            <input type="hidden" value="{{$cartItem->id}}">
+                                            <button role="submit" class="grey_button1"
+                                                    style=" margin-left:30px; border-radius: 20px;  padding: 9px 35px;">
+                                                Update Item
+                                            </button>
+                                        </td>
+
+
+                                    </tr>
+                                </form>
+                                <tr>
+                                    <td colspan="2" align="center">
+
+                                    </td>
+                                </tr>
+                            @endforeach
+                            <tr style="color: black">
+                                <td><strong>Subtotal</strong></td>
+                                <td><i><strong>&#8358;{{number_format(\Cart::getsubTotal() )}}</strong></i></td>
+                            </tr>
+                        </table>
+
+
+                        <div class="d-flex justify-content-between" style="margin-top: 20px">
+                            <button class="grey_button"
+                                    style="font-size: 12px; border-radius: 20px;  padding: 9px 10px;"><a href="/shop    ">
+                                    Continue Shopping</a></button>
+                            <button class="grey_button"
+                                    style="font-size: 12px; border-radius: 20px;  padding: 9px 10px;"> <a href="/checkout">
+                                    Proceed to Checkout</a></button>
+                        </div>
+
+                    </div>
+
+
+                    {{--                    LAPTOP VIEW--}}
+
+                    <div class="table-responsive cart_laptop">
                         <table class="table ">
                             <thead>
                             <tr>
@@ -74,11 +161,13 @@
                                             <div class="media">
                                                 <div class="d-flex">
                                                     {{--REGULAR HOSTING--}}
-                                                    {{-- <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px" style="border-radius: 10px" />--}}
+
+                                                    <img src="{{asset('storage/'.$cartItem->image)}}" width="150"
+                                                         height="100px" style="border-radius: 10px"/>
                                                     {{--CLOUDINARY--}}
 
-                                                    <img src="{{asset('storage/'.$cartItem->image)}}" alt="" width="120"
-                                                         height="90px">
+                                                    {{--  <img src="{{asset('storage/'.$cartItem->image)}}" alt="" width="120"--}}
+                                                    {{--  height="90px">--}}
 
                                                 </div>
                                                 <div class="media-body">
@@ -125,9 +214,12 @@
 
                             <tr class="bottom_button">
                                 <td>
-                                    <a href="/shop"> <button class="grey_button"
-                                            style="  border-radius: 20px;  padding: 9px 35px;">
-                                        Continue Shopping</button></a>
+                                    <a href="/shop">
+                                        <button class="grey_button"
+                                                style="  border-radius: 20px;  padding: 9px 35px;">
+                                            Continue Shopping
+                                        </button>
+                                    </a>
                                 </td>
                                 <td></td>
                                 <td></td>
@@ -135,9 +227,12 @@
                                 <td></td>
                                 <td>
                                     <div class="cupon_text float-right">
-                                        <a  href="/checkout"> <button class="grey_button" style=" border-radius: 20px;  padding: 9px 35px;">
-                                          Proceed to Checkout
-                                        </button></a>
+                                        <a href="/checkout">
+                                            <button class="grey_button"
+                                                    style=" border-radius: 20px;  padding: 9px 35px;">
+                                                Proceed to Checkout
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>

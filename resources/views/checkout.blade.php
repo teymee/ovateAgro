@@ -156,6 +156,8 @@
 
 
                     </div>
+
+
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Your Order</h2>

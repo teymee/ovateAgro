@@ -40,9 +40,25 @@
                         </div>
 
 
+{{--                        <div class="form-group">--}}
+{{--                            <label for="exampleTextarea1">Description</label>--}}
+{{--                            <textarea name="description" class="form-control" id="exampleTextarea1" rows="4">{{old(value('description'))}}</textarea>--}}
+{{--                            @error('description')--}}
+{{--                            <p style="color:red"><small><strong>{{$message}}</strong></small></p>--}}
+{{--                            @enderror--}}
+{{--                        </div>--}}
+
                         <div class="form-group">
                             <label for="exampleTextarea1">Description</label>
-                            <textarea name="description" class="form-control" id="exampleTextarea1" rows="4">{{old(value('description'))}}</textarea>
+                            <textarea
+                                name="description"
+                                class="form-control"
+                                id="summary-ckeditor"
+                                rows="10" name="body"
+                                @error('body')
+                                style="border-color: red;"
+                                @enderror>{{old(value('description'))}}</textarea>
+
                             @error('description')
                             <p style="color:red"><small><strong>{{$message}}</strong></small></p>
                             @enderror
