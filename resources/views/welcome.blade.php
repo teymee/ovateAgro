@@ -178,7 +178,7 @@
         </div>
     </section>
 
-    @if($person->count() > 0)
+    @if($person !== null)
     <section class="monthly">
         <h4 class="text-center ftco-animate mb-4"><i>Agro Person Of  {{date('F', strtotime($person->created_at))}} </i> </h4>
         <div class="inner_monthly ftco-animate ">
