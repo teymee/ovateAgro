@@ -70,7 +70,6 @@
                                                 <i class="fas fa-times"></i>
                                             </button>
                                         </form>
-                                        {{dd($cartItem->image)}}
                                         <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"
                                              style="border-radius: 10px"/>
                                     </td>
@@ -161,7 +160,6 @@
                                         <td>
                                             <div class="media">
                                                 <div class="d-flex">
-                                                 {{dd($cartItem->image)}}
                                                     {{--REGULAR HOSTING--}}
 
                                                     <img src="{{asset('storage/'.$cartItem->image)}}" width="150"
