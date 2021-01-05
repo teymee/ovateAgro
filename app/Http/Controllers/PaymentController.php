@@ -87,7 +87,7 @@ class PaymentController extends Controller
                     $newOrderProduct = new OrderedProduct();
                     $newOrderProduct->order_id = $order->id;
                     $newOrderProduct->name = $content->name;
-                    $newOrderProduct->image = $content->image;
+//                    $newOrderProduct->image = $content->image;
                     $newOrderProduct->quantity = $content->quantity;
                     $newOrderProduct->price = $content->price;
                     $newOrderProduct->status = 'Pending';
