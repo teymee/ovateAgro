@@ -1933,15 +1933,12 @@ ul{
 .uk-alert-success{
     font-size: 12px;
 }
-    .img_product{
-        width: 200px !important;
-        height:300px !important;
-    }
+
 
     .description{
         font-size: 12px !important;
     }
-    .description h4, .product_details h4{
+    .description h4, .product_details h4 , .description h2, .description h1, .description h3{
         font-size: 14px !important;
     }
 
