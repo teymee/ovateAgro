@@ -21,7 +21,7 @@ class   CreateOrderedProductsTable extends Migration
             $table->string('quantity');
             $table->string('price');
             $table->string('status');
-            $table->string('delivered_at');
+            $table->string('delivered_at')->nullable();
             $table->timestamps();
 
 
