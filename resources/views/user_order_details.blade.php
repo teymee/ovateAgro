@@ -74,9 +74,10 @@
                             @foreach($orders as $order)
                                 <div class="order_product d-flex justify-content-between">
                                     <div class="d-flex">
-                                        <img
-                                            src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"
-                                            alt="" >
+{{--                                        <img--}}
+{{--                                            src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"--}}
+{{--                                            alt="" >--}}
+                                        <img src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
                                         <div  style="margin-top: 10px">
                                             <h6>{{$order->name}}</h6>
                                             <p>Quantity : {{$order->quantity}}</p>

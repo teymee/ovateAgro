@@ -17,7 +17,7 @@ class   CreateOrderedProductsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->string('name');
-            $table->string('image');
+//            $table->string('image');
             $table->string('quantity');
             $table->string('price');
             $table->string('status');

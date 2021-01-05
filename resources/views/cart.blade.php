@@ -70,8 +70,9 @@
                                                 <i class="fas fa-times"></i>
                                             </button>
                                         </form>
-                                        <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"
-                                             style="border-radius: 10px"/>
+{{--                                        <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"--}}
+{{--                                             style="border-radius: 10px"/>--}}
+                                        <img src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,7 +130,7 @@
 
                         <div class="d-flex justify-content-between" style="margin-top: 20px">
                             <button class="grey_button"
-                                    style="font-size: 12px; border-radius: 20px;  padding: 9px 10px;"><a href="/shop    ">
+                                    style="font-size: 12px; border-radius: 20px;  padding: 9px 10px;"><a href="/shop     ">
                                     Continue Shopping</a></button>
                             <button class="grey_button"
                                     style="font-size: 12px; border-radius: 20px;  padding: 9px 10px;"> <a href="/checkout">
@@ -162,8 +163,9 @@
                                                 <div class="d-flex">
                                                     {{--REGULAR HOSTING--}}
 
-                                                    <img src="{{asset('storage/'.$cartItem->image)}}" width="150"
-                                                         height="100px" style="border-radius: 10px"/>
+{{--                                                    <img src="{{asset('storage/'.$cartItem->image)}}" width="150"--}}
+{{--                                                         height="100px" style="border-radius: 10px"/>--}}
+                                                    <img width="150" height="100px"  src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
                                                     {{--CLOUDINARY--}}
 
                                                     {{--  <img src="{{asset('storage/'.$cartItem->image)}}" alt="" width="120"--}}
