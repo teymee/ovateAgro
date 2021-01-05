@@ -72,7 +72,7 @@
                                         </form>
 {{--                                        <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"--}}
 {{--                                             style="border-radius: 10px"/>--}}
-                                        <img src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
+                                        <img width="150" height="100px" src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
                                     </td>
                                 </tr>
                                 <tr>

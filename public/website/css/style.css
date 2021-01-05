@@ -1933,6 +1933,25 @@ ul{
 .uk-alert-success{
     font-size: 12px;
 }
+    .img_product{
+        width: 200px !important;
+        height:300px !important;
+    }
+
+    .description{
+        font-size: 12px !important;
+    }
+    .description h4, .product_details h4{
+        font-size: 14px !important;
+    }
+
+    .product_details h2{
+        font-size: 14px !important;
+    }
+    .product_details  .grey_button{
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
 }
 
 input[type="number"]{

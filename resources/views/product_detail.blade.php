@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-6">
 
-                    <img src="{{asset('storage/'.$product->images)}}" alt="" class="img-zoom">
+                    <img src="{{asset('storage/'.$product->images)}}" alt="" class="img-zoom img_product">
                 </div>
 
                 <div class="col-md-6">
