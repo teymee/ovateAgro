@@ -71,6 +71,15 @@
                             {{--                                </div>--}}
 
                             {{--                            </div>--}}
+
+                            @if($orders->count() === 0)
+                                <div class="empty">
+
+                                    <img class="empty" src="website/images/empty.svg" alt="">
+                                    <h6 class="text-center">No Placed Orders</h6>
+                                </div>
+                            @else
+
                             @foreach($orders as $order)
                                 <div class="order_product d-flex justify-content-between">
                                     <div class="d-flex">
@@ -78,7 +87,7 @@
 {{--                                            src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"--}}
 {{--                                            alt="" >--}}
                                         <img src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
-                                        <div  style="margin-top: 10px">
+                                        <div  style="margin-top: 10px; margin-left: 10px">
                                             <h6>{{$order->name}}</h6>
                                             <p>Quantity : {{$order->quantity}}</p>
                                             <p>Price : &#8358; {{ number_format($order->quantity * $order->price)}}</p>
@@ -101,6 +110,7 @@
 
                                 </div>
                             @endforeach
+                            @endif
 
                             {{--                            <div class="order_product d-flex justify-content-between" style="padding: 10px 30px">--}}
                             {{--                                <div class="d-flex">--}}

@@ -64,8 +64,16 @@
             <a href="" style="margin-right: 20px" class="active-link">Description</a>
             <hr>
 
+            @if( $product->description  == "")
+                <div class="empty">
+
+                    <img class="empty" src="/website/images/empty.svg" alt="">
+                    <h6 class="text-center">No Description</h6>
+                </div>
+            @else
             <h4 style="margin-top: 50px"><strong>ABOUT</strong></h4>
             <p style="margin-top: 50px">{!! $product->description !!}</p>
+            @endif
 
         </div>
 

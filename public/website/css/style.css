@@ -27,6 +27,66 @@ body{
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 700px) {
+    body p{
+        font-size: 12px !important;
+    }
+
+    body h1 h2 h3{
+        font-size: 16px !important;
+    }
+
+    body  h2 {
+        font-size: 15px !important;
+    }
+
+    body h3{
+        font-size: 14px !important;
+    }
+    body h4 {
+        font-size: 14px !important;
+    }
+    body  h5 {
+        font-size: 14px !important;
+    }
+    body  h6 {
+        font-size: 13px !important;
+    }
+
+    .home-slider{
+        z-index: 999999 !important;
+    }
+
+    #section-counter strong , span{
+        font-size: 16px !important;
+    }
+
+    #section-counter  span{
+        font-size: 13px !important;
+    }
+
+}
+
+/*GLOBAL*/
+.empty{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+
+.empty h6{
+    margin-top: -50px !important;
+
+}
+
+
+.empty img{
+    width: 250px;
+    height: 250px;
+}
+
 
 /*Person of the month*/
 .monthly{
@@ -475,6 +535,18 @@ footer a {
 
 
 /*ORDER_PRODUCT*/
+
+@media only screen and (max-width: 700px) {
+    .order_product img{
+        height:100px !important;
+        width:150px !important;
+    }
+}
+
+.order_product img{
+    height:200px !important;
+    width:250px !important;
+}
 
 .user_order{
     padding-top: 20px;
@@ -2079,7 +2151,7 @@ input[type="number"]{
     }
 
     .eoa{
-        font-size: 35px !important;
+        font-size: 20px !important;
     }
 
     .inside1{
@@ -2095,7 +2167,7 @@ input[type="number"]{
     }
 
     .p{
-        font-size: 13px !important;
+        font-size: 12px !important;
         color: white;
     }
 

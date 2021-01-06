@@ -23,7 +23,7 @@
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
+                        <h1 class=" eoa mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
                         <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">  Your one stop centre for quality farm inputs.</p>
                     </div>
                 </div>

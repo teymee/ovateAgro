@@ -24,7 +24,13 @@
 @endsection
 
 @section('content')
+    @if( $products->count()  == 0)
+        <div class="empty">
 
+            <img class="empty" src="/website/images/empty.svg" alt="">
+            <h6 class="text-center">Shop's Currently Empty</h6>
+        </div>
+    @else
     <div class="container" style="margin-top: 100px; margin-bottom: 200px">
         <div class="d-flex justify-content-between">
             <h6>Showing all {{$products->count()}} products</h6>
@@ -79,4 +85,5 @@
             {{$products->links()}}
         </div>
     </div>
+    @endif
 @endsection

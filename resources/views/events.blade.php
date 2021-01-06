@@ -27,7 +27,16 @@
                 </div>
             </div>
 
+            @if( $events->count()  == 0)
+                <div class="empty">
+
+                    <img class="empty" src="/website/images/empty.svg" alt="">
+                    <h6 class="text-center">No Current Events</h6>
+                </div>
+            @else
+
             <div class="row">
+
                 @foreach($events as $event)
                     <div class="col-md-6">
                         <div  class="blog-entry ftco-animate">
@@ -63,6 +72,6 @@
 
 
             {{$events->links('pagination-links')}}
-
+        @endif
     </section>
 @endsection

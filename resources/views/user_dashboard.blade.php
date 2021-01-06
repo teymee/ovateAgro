@@ -53,6 +53,14 @@
 
                         <div class="user_order">
 
+                            @if($orders->count() === 0)
+                                <div class="empty">
+
+                                    <img class="empty" src="website/images/empty.svg" alt="">
+                                    <h6 class="text-center">No Placed Orders</h6>
+                                </div>
+
+                            @else
                             @foreach($orders as $order)
                                 <div class="order_product d-flex justify-content-between" style="padding: 10px 30px">
                                     <div class="d-flex">
@@ -90,6 +98,7 @@
 
                                 </div>
                             @endforeach
+                            @endif
 
 
                         </div>

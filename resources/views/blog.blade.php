@@ -27,7 +27,13 @@
                     <p><small><i><strong>Bill And Melinda Gate Foundation</strong></i></small></p>
                 </div>
             </div>
+            @if( $articles->count()  == 0)
+                <div class="empty">
 
+                    <img class="empty" src="/website/images/empty.svg" alt="">
+                    <h6 class="text-center">No Current Article</h6>
+                </div>
+            @else
             <div class="row">
                 @foreach($articles as $article)
                     <div class="col-md-6">
@@ -71,6 +77,7 @@
 
             @if(!request('tag'))
         {{$articles->links('pagination-links')}}
+        @endif
         @endif
     </section>
 
