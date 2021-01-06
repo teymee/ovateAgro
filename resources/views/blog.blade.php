@@ -21,7 +21,7 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-7 heading-section text-center ftco-animate">
+                <div class="col-md-7 heading-section text-center ftco-animate article-header">
                     <h2 class="mb-4">Articles</h2>
                     <p>“Investments in agriculture are the best weapons against hunger,poverty and they have made life better for billions of people”.</p>
                     <p><small><i><strong>Bill And Melinda Gate Foundation</strong></i></small></p>

@@ -65,6 +65,12 @@ body{
         font-size: 13px !important;
     }
 
+    .article-hearder h2{
+        font-size: 14px !important;
+    }
+    .article-hearder p{
+        font-size: 12px !important;
+    }
 }
 
 /*GLOBAL*/
@@ -538,14 +544,14 @@ footer a {
 
 @media only screen and (max-width: 700px) {
     .order_product img{
-        height:100px !important;
-        width:150px !important;
+        height:50px !important;
+        width:50px !important;
     }
 }
 
 .order_product img{
-    height:200px !important;
-    width:250px !important;
+    height:100px !important;
+    width:150px !important;
 }
 
 .user_order{
@@ -2146,7 +2152,7 @@ input[type="number"]{
 
 @media only screen and (max-width: 800px) {
     .fh{
-        font-size: 30px !important;
+        font-size: 20px !important;
 
     }
 
