@@ -57,7 +57,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <img src="{{asset("website/images/ovate-logo.png")}}" alt=""><a class="navbar-brand" href="/" style="font-size: 12px;">Ovate Agro Centre</a>
+        <img src="{{asset("website/images/ovate-logo.png")}}" alt="" style="height: 88px; width:88px "><a class="navbar-brand" href="/" style="font-size: 12px;">Ovate Agro Centre</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
