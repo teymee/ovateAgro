@@ -33,14 +33,14 @@ body{
         font-size: 12px !important;
     } /* your css rules for ipad portrait */
 
-    section .home-slider{
+    /*section .home-slider{*/
 
 
-        z-index: 11 !important;
+    /*    z-index: 11 !important;*/
 
-        overflow-y: scroll !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
+    /*    overflow-y: scroll !important;*/
+    /*    -webkit-overflow-scrolling: touch !important;*/
+    /*}*/
 }
 @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
     nav .navbar-brand{
@@ -9819,7 +9819,7 @@ h1, h2, h3, h4, h5,
 
     height: 750px;
     position: relative;
-    z-index: 9999 !important; }
+    z-index: 0; }
 /*z-changes*/
 @media (max-width: 1199.98px) {
     .owl-carousel.home-slider .slider-item {
