@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="../../assets/images/ovate-logo.png" />
+    <link rel="shortcut icon" href="website/images/ovate-logo.png" />
     <link rel="stylesheet" href="/website/css/flaticon.css ">
     <link rel="stylesheet" href="/website/css/icomoon.css">
     <link rel="stylesheet" href="/website/css/style.css">
