@@ -27,6 +27,48 @@ body{
     box-sizing: border-box;
 }
 
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    nav .navbar-brand{
+        margin-left: -450px !important;
+        font-size: 12px !important;
+    } /* your css rules for ipad portrait */
+
+    section .home-slider{
+
+
+        z-index: 11 !important;
+
+        overflow-y: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    nav .navbar-brand{
+        margin-left: -500px !important;
+        font-size: 12px !important;
+    } /* your css rules for ipad landscape */
+}
+
+@media only screen and (min-width: 808px)  {
+    nav .navbar-brand{
+        margin-left: -20px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #blog-main-banner{
+        background-size: 200px !important;
+        background-position: left !important;
+    }
+
+    nav .navbar-brand{
+        margin-left: -60px !important;
+        font-size: 12px !important;
+    }
+}
+
+
 @media only screen and (max-width: 700px) {
     body p{
         font-size: 12px !important;
@@ -9777,7 +9819,8 @@ h1, h2, h3, h4, h5,
 
     height: 750px;
     position: relative;
-    z-index: 0; }
+    z-index: 9999 !important; }
+/*z-changes*/
 @media (max-width: 1199.98px) {
     .owl-carousel.home-slider .slider-item {
         background-position: center center !important; } }

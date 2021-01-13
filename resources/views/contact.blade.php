@@ -23,16 +23,21 @@
                     <h2 class="h4">Contact Information</h2>
                 </div>
                 <div class="w-100"></div>
-                <div class="col-md-8">
-                    <p style="color: black"><span style="color: grey">Address:</span> Km  Abeokuta-Ibadan Exp way Beside SLAB,
-                        Camp Abeokuta  Ogun State Nigeria.</p>
-                </div>
                 <div class="col-md-3">
                     <p><span>Phone:</span> <a href="tel://+2348133097124">(234) 8133097124</a></p>
                 </div>
                 <div class="col-md-3">
                     <p><span>Email:</span> <a href="mailto:ov8farms@yahoo.com">ov8farms@yahoo.com</a></p>
                 </div>
+                <div class="col-md-6">
+                    <p style="color: black"><span style="color: grey">Branch Office:</span> 44 Ayinla Sodimu Str Car Wash Abeokuta Ogun State</p>
+                </div>
+                <div class="col-md-6">
+                    <p style="color: black"><span style="color: grey">Headquarters:</span> Km 11 Abeokuta-Ibadan Exp way Beside SLAAB gas,
+                        Camp Abeokuta Ogun State.</p>
+                </div>
+
+
 
             </div>
             <div class="row block-9">

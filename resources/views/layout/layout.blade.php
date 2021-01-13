@@ -57,7 +57,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/" style="font-size: 14px"><img src="{{asset("website/images/ovate-logo.png")}}" alt="">Ovate Agro Centre</a>
+        <img src="{{asset("website/images/ovate-logo.png")}}" alt=""><a class="navbar-brand" href="/" style="font-size: 12px;">Ovate Agro Centre</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
@@ -157,9 +157,10 @@
                     <h2 class="ftco-heading-2">About us</h2>
                     <p>We are young professional passionate about food security & nature preservation in the world .</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.twitter.com/ovateagro"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/ovateagro"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/ovateagrocentre/"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://wa.me/2348133097124"><span class="fab fa-whatsapp"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -196,13 +197,16 @@
 {{--                </div>--}}
 {{--            </div>--}}
             <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
+                <div class="ftco-footer-widget mb-4" style="font-size: 12px">
                     <h2 class="ftco-heading-2">Have Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Km  Abeokuta-Ibadan Exp way Beside SLAB,
-                                    Camp Abeokuta  Ogun State Nigeria.</span></li>
-                            <li><a href="tel://+2348133097124"><span class="icon icon-phone"></span><span class="text">(234) 8133097124</span></a></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text"> <span style="color: white"><strong>Headquarters:</strong></span>
+                                    Km 11 Abeokuta-Ibadan Exp way Beside SLAAB gas,
+                                    Camp Abeokuta Ogun State.</span></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text"> <span style="color: white"><strong>  Branch Office:</strong></span>
+                                   44 Ayinla Sodimu Str Car Wash Abeokuta Ogun State.</span></li>
+                            <li><a href="tel://+2348133097124"><span class="icon icon-phone"></span><span class="text">(+234) 8133097124 ,  (+234) 8152348590</span></a></li>
                             <li><a href="mailto:ov8farms@yahoo.com"><span class="icon icon-envelope"></span><span class="text">ov8farms@yahoo.com</span></a></li>
                         </ul>
                     </div>

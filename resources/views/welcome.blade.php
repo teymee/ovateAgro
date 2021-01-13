@@ -5,7 +5,7 @@
     <section class="home-slider js-fullheight owl-carousel">
 
 
-        <div class="slider-item js-fullheight" style="background-image:url(website/images/agri-busines.jpg);">
+        <div class="slider-item js-fullheight" style="background-image:url(website/images/agri-mangt.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -18,13 +18,13 @@
         </div>
 
 
-        <div class="slider-item bannenr2 js-fullheight" style="background-image:url(website/images/headline4.jpg);">
+        <div class="slider-item  js-fullheight" style="background-image:url(website/images/farm-input.jpg);">
             <div class="overlay"></div>
             <div class="container-fluid">
                 <div class="row no-gutters slider-text slider-text-2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                         <h1 class=" eoa mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Farm Input Store</h1>
-                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">  Your one stop centre for quality farm inputs.</p>
+                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> Check out quality agricultural  inputs at best deal from our store. </p>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-md-4 ftco-animate">
                     <a href="#" class="destination-entry d-flex align-items-center justify-content-center img"
-                       style="background-image: url(website/images/agri-busines.jpg);">
+                       style="background-image: url(website/images/farm-ent.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
                             <h3>Farm Enterprise Planning & Management</h3>
@@ -84,7 +84,7 @@
                        style="background-image: url(website/images/soil-sampling.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3> Soil Sampling & testing</h3>
+                            <h3>Soil Testing & Detailed Analysis</h3>
 
                         </div>
                     </a>
@@ -94,7 +94,7 @@
                        style="background-image: url(website/images/agri-media.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>Agri Media & Innovations</h3>
+                            <h3>AgriMedia </h3>
                         </div>
                     </a>
                 </div>
@@ -112,7 +112,7 @@
                        style="background-image: url(website/images/backyard.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3> Backyard Garden Set Up</h3>
+                            <h3>Backyard Garden Design & Set up</h3>
 
 
                         </div>
@@ -123,7 +123,7 @@
                        style="background-image: url(website/images/pest.jpg);">
                         <span class="overlay"></span>
                         <div class="text text-center">
-                            <h3>General Fumigations & Weed control</h3>
+                            <h3>Fumigations & Weed control</h3>
                         </div>
                     </a>
                 </div>

@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div class="hero-wrap js-fullheight" style="background-image: url('website/images/bg_333.jpg');"
+    <div class="hero-wrap js-fullheight" style="background-image: url('website/images/events.jpg');"
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -23,7 +23,7 @@
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <h2 class="mb-4">Events</h2>
-                    <p>Be up to date with recent happenings in the Agro World</p>
+                    <p>Be up to date with happenings in the agricultural space.</p>
                 </div>
             </div>
 
