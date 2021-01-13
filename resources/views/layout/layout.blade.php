@@ -201,7 +201,7 @@
                     <h2 class="ftco-heading-2">Have Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text"> <span style="color: white"><strong>Headquarters:</strong></span>
+                            <li><span class="icon icon-map-marker"></span><span class="text">
                                     Km 11 Abeokuta-Ibadan Exp way Beside SLAAB gas,
                                     Camp Abeokuta Ogun State.</span></li>
                             <li><span class="icon icon-map-marker"></span><span class="text"> <span style="color: white"><strong>  Branch Office:</strong></span>

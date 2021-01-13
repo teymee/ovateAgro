@@ -33,7 +33,7 @@
                     <p style="color: black"><span style="color: grey">Branch Office:</span> 44 Ayinla Sodimu Str Car Wash Abeokuta Ogun State</p>
                 </div>
                 <div class="col-md-6">
-                    <p style="color: black"><span style="color: grey">Headquarters:</span> Km 11 Abeokuta-Ibadan Exp way Beside SLAAB gas,
+                    <p style="color: black"><span style="color: grey">Address:</span> Km 11 Abeokuta-Ibadan Exp way Beside SLAAB gas,
                         Camp Abeokuta Ogun State.</p>
                 </div>
 
