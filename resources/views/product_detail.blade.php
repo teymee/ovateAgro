@@ -2,7 +2,7 @@
 
 @section('banner')
 
-    <div class=" hero-wrap js-fullheight" id="blog-banner"   style="background-image: url('website/images/shop.jpg'); background-size: 300px  "
+    <div class=" hero-wrap js-fullheight" id="blog-banner"   style="background-image: url('/website/images/shop.jpg'); background-size: 300px  "
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
