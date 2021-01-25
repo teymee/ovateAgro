@@ -39,6 +39,14 @@ class WebsiteController extends Controller
         return view('shop', compact('tags','products'));
     }
 
+    public function search(){
+        $query = \request('search');
+        $tags = Tag::all();
+        $products = Product::where('name', 'like', "%".$query."%")->paginate(9);
+
+        return view('shop', compact('tags','products'));
+    }
+
     public function detail($products){
         if( Str::contains((str_replace(url('/'), '', url()->previous())), '/thank-You/')){
             \Cart::clear();

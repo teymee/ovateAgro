@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/',                       'WebsiteController@home');
 Route::get('/shop',                   'WebsiteController@shop');
+Route::post('/search',                  'WebsiteController@search');
 Route::get('/events',                 'WebsiteController@events');
 Route::get('/contact',                'WebsiteController@contact');
 Route::get('/detail/{products}',      'WebsiteController@detail');

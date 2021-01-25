@@ -28,18 +28,31 @@
         <div class="empty">
 
             <img class="empty" src="/website/images/empty.svg" alt="">
+            @if($products->count()  == 0 && Request::path() == 'search')
+
+                <h6 class="text-center">Sorry We don't have this product in our store</h6>
+            @else
+
+
             <h6 class="text-center">Shop's Currently Empty</h6>
+            @endif
         </div>
+
     @else
+
+
     <div class="container" style="margin-top: 100px; margin-bottom: 200px">
         <div class="d-flex justify-content-between">
             <h6>Showing all {{$products->count()}} products</h6>
 
-{{--            <select name="" id="">--}}
-{{--                <option value="">Sort by</option>--}}
-{{--                <option value="">Sort by</option>--}}
-{{--                <option value="">Sort by</option>--}}
-{{--            </select>--}}
+            <form action="/search" method="POST" >
+                @csrf
+
+                <input type="text" name="search"
+                       style="border: none ; border-bottom: 1px solid #cef362; width: 200px"
+                       placeholder= "&#x1F50D; Search Product">
+            </form>
+
         </div>
 
         <div class="row" style="margin-top: 50px">
@@ -47,7 +60,7 @@
             @foreach($products as $product)
             <div class=" col-sm-6 col-md-6 col-lg-4 ">
                 <a href="/detail/{{$product->name}}">
-                    <img src={{asset('storage/'.$product->images)}} alt="" height="300" class="images">
+                    <img src={{asset('storage/'.$product->images)}} alt="" style="height: 300px" class="images">
                     <div class="caption">
                         <h5><strong>{{$product->name}}</strong></h5>
                         <h6><strong>&#8358; {{ number_format($product->price) }}</strong></h6>
