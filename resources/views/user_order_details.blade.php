@@ -4,7 +4,6 @@
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#AFD557" fill-opacity="1"
               d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-
     </svg>
     <div class="container text-center">
         <h1 class="cart-title" style="margin-top: -190px; color: white;">My Account</h1>
