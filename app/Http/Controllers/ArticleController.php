@@ -42,58 +42,19 @@ class ArticleController extends Controller
 
 
         //REGULAR HOSTING
-        //        dd(request('images'));
-//        $this->validateRequest();
-//        if(request()->hasFile('images')){
-//            $fileNameToStore = request('images')->store('article_images', 'public');
-//        }else{
-//            $fileNameToStore = 'article_images/noimages.png';
-//        }
-//
-//
-//
-//        $article = new Article(request(['title', 'excerpt', 'body', 'images']));
-//        $article->user_id = auth()->user()->id;
-//        $article -> images = $fileNameToStore;
-//
-//
-//        $article->save();
-//
-//        $article->tag()->attach(request('tags'));
-//
-//        return redirect('/blog');
-//
+//                dd(request('images'));
+        $this->validateRequest();
+        if(request()->hasFile('images')){
+            $fileNameToStore = request('images')->store('article_images', 'public');
+        }else{
+            $fileNameToStore = 'article_images/noimages.png';
+        }
 
 
 
-
-        //CLOUDINARY
-
-        $images = $request->file('images');
-
-        $name = $request->file('images')->getClientOriginalName();
-
-        $image_name = $request->file('images')->getRealPath();
-
-        Cloudder::upload($image_name, null);
-
-        list($width, $height) = getimagesize($image_name);
-
-        $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
-        $imageId= Cloudder::getPublicId();
-        //save to uploads directory
-        $images->move(public_path("uploads"), $name);
-
-        //Save images
-//        $this->saveImages($request, $image_url);
         $article = new Article(request(['title', 'excerpt', 'body', 'images']));
-
-        $article->images = $request->file('images')->getClientOriginalName();
-        $article->imagesId = $imageId;
-//        $product->image_url = $image_url;
-
         $article->user_id = auth()->user()->id;
-      
+        $article -> images = $fileNameToStore;
 
 
         $article->save();
@@ -101,6 +62,45 @@ class ArticleController extends Controller
         $article->tag()->attach(request('tags'));
 
         return redirect('/blog');
+
+
+
+
+
+        //CLOUDINARY
+
+//        $images = $request->file('images');
+//
+//        $name = $request->file('images')->getClientOriginalName();
+//
+//        $image_name = $request->file('images')->getRealPath();
+//
+//        Cloudder::upload($image_name, null);
+//
+//        list($width, $height) = getimagesize($image_name);
+//
+//        $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+//        $imageId= Cloudder::getPublicId();
+//        //save to uploads directory
+//        $images->move(public_path("uploads"), $name);
+//
+//        //Save images
+////        $this->saveImages($request, $image_url);
+//        $article = new Article(request(['title', 'excerpt', 'body', 'images']));
+//
+//        $article->images = $request->file('images')->getClientOriginalName();
+//        $article->imagesId = $imageId;
+////        $product->image_url = $image_url;
+//
+//        $article->user_id = auth()->user()->id;
+//
+//
+//
+//        $article->save();
+//
+//        $article->tag()->attach(request('tags'));
+//
+//        return redirect('/blog');
 
 
 

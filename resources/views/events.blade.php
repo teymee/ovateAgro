@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            @if( $events->count()  == 0)
+            @if( $events->count()  === 0)
                 <div class="empty">
 
                     <img class="empty" src="/website/images/empty.svg" alt="">
@@ -38,10 +38,10 @@
             <div class="row">
 
                 @foreach($events as $event)
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div  class="blog-entry ftco-animate">
                             <a href="/event/{{$event->id}}" class="img img-2"
-                               style="background-image: url({{asset("storage/". $event->images)}});"></a>
+                               style="background-image: url({{asset("/storage/".$event->images)}});"></a>
 
                             <div class="text text-2 pt-2 mt-3">
                                 <span class="big">Ovate Agro</span>

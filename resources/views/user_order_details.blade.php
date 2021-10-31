@@ -1,22 +1,8 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div class=" cart-hero hero-wrap js-fullheight" id="blog-banner"
-         style="background-image: url('website/images/shop.jpg'); background-size: 300px "
-         data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
-                 data-scrollax-parent="true">
-                <div class=" ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-3 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">Orders</h1>
-                    {{--                                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
-                </div>
-            </div>
-        </div>
-    </div>
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#CEF362" fill-opacity="1"
+        <path fill="#AFD557" fill-opacity="1"
               d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
 
     </svg>
@@ -53,29 +39,10 @@
 
                         <div class="user_order">
 
-                            {{--                            <div class="order_product d-flex justify-content-between">--}}
-                            {{--                                <div class="d-flex">--}}
-                            {{--                                    <img--}}
-                            {{--                                        src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"--}}
-                            {{--                                        alt="">--}}
-                            {{--                                    <div  style="margin-top: 10px">--}}
-                            {{--                                        <h6>Women's Elegant Rose Gold Watch</h6>--}}
-                            {{--                                        <p>Order 375711145</p>--}}
-                            {{--                                        <p>Size: One size fits all</p>--}}
-                            {{--                                    </div>--}}
-
-                            {{--                                </div>--}}
-
-                            {{--                                <div>--}}
-                            {{--                                    <a href=""> SEE DETAILS</a>--}}
-                            {{--                                </div>--}}
-
-                            {{--                            </div>--}}
-
                             @if($orders->count() === 0)
                                 <div class="empty">
-
-                                    <img class="empty" src="website/images/empty.svg" alt="">
+                                    <img class="empty" src="{{asset('/website/images/empty.svg')}}" alt="">
+                            
                                     <h6 class="text-center">No Placed Orders</h6>
                                 </div>
                             @else
@@ -83,10 +50,8 @@
                             @foreach($orders as $order)
                                 <div class="order_product d-flex justify-content-between">
                                     <div class="d-flex">
-{{--                                        <img--}}
-{{--                                            src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"--}}
-{{--                                            alt="" >--}}
-                                        <img src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
+                                        <img src="{{asset('/storage/'.$order->images)}}" alt="">
+                                      
                                         <div  style="margin-top: 10px; margin-left: 10px">
                                             <h6>{{$order->name}}</h6>
                                             <p>Quantity : {{$order->quantity}}</p>
@@ -112,7 +77,7 @@
                             @endforeach
                             @endif
 
-                            {{--                            <div class="order_product d-flex justify-content-between" style="padding: 10px 30px">--}}
+                            <!-- {{--                            <div class="order_product d-flex justify-content-between" style="padding: 10px 30px">--}}
                             {{--                                <div class="d-flex">--}}
 
                             {{--                                    <div  style="margin-top: 10px">--}}
@@ -127,29 +92,10 @@
                             {{--                                    <a href=""> SEE DETAILS</a>--}}
                             {{--                                </div>--}}
 
-                            {{--                            </div>--}}
+                            {{--                            </div>--}} -->
 
 
 
-
-                            {{--                            <div class="order_product d-flex justify-content-between">--}}
-                            {{--                                <div class="d-flex">--}}
-                            {{--                                    <img--}}
-                            {{--                                        src="https://ng.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/50/868654/1.jpg?9944"--}}
-                            {{--                                        alt="">--}}
-                            {{--                                    <div  style="margin-top: 10px; line-height: 20px">--}}
-                            {{--                                        <h6>Women's Elegant Rose Gold Watch</h6>--}}
-                            {{--                                        <p>Order 375711145</p>--}}
-                            {{--                                        <p>Size: One size fits all</p>--}}
-                            {{--                                    </div>--}}
-
-                            {{--                                </div>--}}
-
-                            {{--                                <div>--}}
-                            {{--                                    <a href=""> SEE DETAILS</a>--}}
-                            {{--                                </div>--}}
-
-                            {{--                            </div>--}}
                         </div>
 
 

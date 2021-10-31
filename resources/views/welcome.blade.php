@@ -211,7 +211,7 @@
                                                 {{--REGULAR HOSTING--}}
                                         {{--{{asset("storage/". $article->images)}}--}}
 
-                            {{-- CLOUDINARY--}}style="background-image: url({{asset('uploads/'.$article->images)}});"></a>
+                            {{-- CLOUDINARY--}}style="background-image: url({{asset('storage/'.$article->images)}});"></a>
                             {{--                            website/images/image_1.jpg--}}
                             <div class="text text-2 pt-2 mt-3">
                                 <span class="big">Ovate Agro</span>

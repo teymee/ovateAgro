@@ -110,7 +110,7 @@
                             {{-- REGULAR HOSTING--}}
                             {{--                                    <img src="{{asset('storage/'.$product->images)}}" alt="" style ="max-width:350px; max-height:300px;">--}}
                             {{-- CLOUDINARY--}}
-                            <img src="{{asset('uploads/'.$articles->images)}}" class="img-responsive" style ="max-width:350px; max-height:300px;" >
+                            <img src="{{asset('storage/'.$articles->images)}}" class="img-responsive" style ="max-width:350px; max-height:300px;" >
 
 
 

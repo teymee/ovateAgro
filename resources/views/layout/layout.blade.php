@@ -41,17 +41,17 @@
 
 
 
-    <style>
-        @media (max-width: 800px) {
-            .bannenr2{
-                background-image:url(website/images/mobile-headline.jpg) !important;
+{{--    <style>--}}
+{{--        @media (max-width: 800px) {--}}
+{{--            .bannenr2{--}}
+{{--                background-image:url(website/images/mobile-headline.jpg) !important;--}}
 
-            }
-            #blog-banner {
-                background-image: url('website/images/bg_34.jpg');
-            }
-        }
-    </style>
+{{--            }--}}
+{{--            #blog-banner {--}}
+{{--                background-image: url('website/images/bg_34.jpg');--}}
+{{--            }--}}
+{{--        }--}}
+{{--    </style>--}}
 </head>
 <body>
 
@@ -91,7 +91,7 @@
                             <a class="dropdown-item" href="/myaccount" style="font-size: 13px">My Account</a>
 
                             @can('allow_audience')
-                            <a class="dropdown-item" href="/admin" style="font-size: 13px">Dashboard</a>
+                            <a class="dropdown-item" href="/dashboard" style="font-size: 13px">Dashboard</a>
                             @endcan
                             <form action="/logout" method="post" >
                                 @csrf

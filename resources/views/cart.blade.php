@@ -10,13 +10,12 @@
                  data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                     <h1 class="mb-3 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">Cart</h1>
-                    {{--                                        <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.3 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
                 </div>
             </div>
         </div>
     </div>
     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#CEF362" fill-opacity="1"
+        <path fill="#AFD557" fill-opacity="1"
               d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
 
     </svg>
@@ -72,7 +71,7 @@
                                         </form>
 {{--                                        <img src="{{asset('storage/'.$cartItem->image)}}" width="150" height="100px"--}}
 {{--                                             style="border-radius: 10px"/>--}}
-                                        <img width="150" height="100px" src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
+                                        <img width="150" height="100px" src="{{asset('storage/'.$cartItem->image)}}" alt="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -163,9 +162,9 @@
                                                 <div class="d-flex">
                                                     {{--REGULAR HOSTING--}}
 
-{{--                                                    <img src="{{asset('storage/'.$cartItem->image)}}" width="150"--}}
-{{--                                                         height="100px" style="border-radius: 10px"/>--}}
-                                                    <img width="150" height="100px"  src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">
+                                                    <img src="{{asset('storage/'.$cartItem->image)}}" width="150"
+                                                         height="100px" style="border-radius: 10px"/>
+{{--                                                    <img width="150" height="100px"  src="https://www.afrimash.com/wp-content/uploads/2020/07/vn-21-battery-sprayer-500x500-1.png" alt="">--}}
                                                     {{--CLOUDINARY--}}
 
                                                     {{--  <img src="{{asset('storage/'.$cartItem->image)}}" alt="" width="120"--}}

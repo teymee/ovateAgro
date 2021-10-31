@@ -2,7 +2,7 @@
 
 @section('banner')
 
-    <div class=" hero-wrap js-fullheight" id="blog-banner"   style="background-image: url('/website/images/shop.jpg'); "
+    <div class=" hero-wrap js-fullheight product-details-banner" id="blog-banner"   style="background-image: url('/website/images/shop.jpg'); "
          data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -10,7 +10,6 @@
                  data-scrollax-parent="true">
                 <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                     <h1 class="mb-4 fh" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Shop/{{$product->name}}</h1>
-                    {{--                    <p class="p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We grow your Agribusiness with every Agro materials,cultivars and machines available in our store.</p>--}}
                 </div>
             </div>
         </div>
@@ -23,7 +22,7 @@
 
 
 
-    <div class="container">
+    <div class="container ">
 
         @if(session('session_message'))
 
@@ -52,7 +51,7 @@
                         <form action="/cart/{{$product->id}}" method="post">
                             @csrf
                             <input type="number" style="width:50px; padding-left: 10px" value="1" min="1" name="quantity">
-                            <button class="grey_button" style=" margin-left:30px; border-radius: 20px;  padding: 15px 35px;">Add to cart</button>
+                            <button class="grey_button" style=" margin-left:30px; border-radius: 20px;  padding: 15px 35px; outline:none;">Add to cart</button>
                         </form>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
         <div class="row related_product" style="margin-bottom: 100px">
 
             @foreach($randoms as $product)
-                <div class="col-4 col-sm-4">
+                <div class=" col-4 col-xs-4  col-md-4 product-details-card">
                     <a href="/detail/{{$product->name}}">
                         <img src="{{asset('storage/'.$product->images)}}" height="300" class="img" >
                         <div class="caption">
@@ -96,16 +95,8 @@
 
                 </div>
             @endforeach
-            <div class="col-4 col-sm-4">
-                <a href="/detail">
-                    <img src={{asset('website/images/spray.jpg')}} alt="" height="300" class="img">
-                    <div class="caption">
-                        <h5><strong>Spray</strong></h5>
-                        <h6>£199.00</h6>
-                    </div>
-                </a>
 
-            </div>
+        
 
 
 

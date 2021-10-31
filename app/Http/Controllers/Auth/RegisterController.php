@@ -86,7 +86,7 @@ class RegisterController extends Controller
 
     public function redirectTo(){
         if(Auth::user()->hasAnyRoles(['superadmin','admin','editor'])){
-            $this->redirectTo = '/admin';
+            $this->redirectTo = '/dashboard';
             return $this->redirectTo;
         }else{
             $this->redirectTo = '/';

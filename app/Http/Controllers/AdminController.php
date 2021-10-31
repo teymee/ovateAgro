@@ -61,15 +61,15 @@ class AdminController extends Controller
     public function update(Article $article, Request $request)
     {
                     //REGULAR HOSTING
-//        if(request()->hasFile('images')){
-//            $firstImage = $article->images;
-//            if($firstImage){
-//                Storage::delete('/public/'.$firstImage);
-//            }
-//            $image = request('images')->store('article_images', 'public');
-//            $article->images = $image;
-//
-//        }
+        if(request()->hasFile('images')){
+            $firstImage = $article->images;
+            if($firstImage){
+                Storage::delete('/public/'.$firstImage);
+            }
+            $image = request('images')->store('article_images', 'public');
+            $article->images = $image;
+
+        }
 
 
 
@@ -79,40 +79,40 @@ class AdminController extends Controller
 
 
 
-        if(request()->hasFile('images')){
-
-            Cloudder::destroyImage($article->imagesId);
-
-
-            $images = $request->file('images');
-
-            $name = $request->file('images')->getClientOriginalName();
-
-
-            $image_name = $request->file('images')->getRealPath();
-
-            Cloudder::upload($image_name, null);
-
-            list($width, $height) = getimagesize($image_name);
-
-            $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
-            $imageId= Cloudder::getPublicId();
-            //save to uploads directory
-            $images->move(public_path("uploads"), $name);
-
-            //Save images
-
-
-
-            $article->images = $request->file('images')->getClientOriginalName();
-
-            $article->imagesId = $imageId;
-            $article->save();
-
-
-
-        }
-
+//        if(request()->hasFile('images')){
+//
+//            Cloudder::destroyImage($article->imagesId);
+//
+//
+//            $images = $request->file('images');
+//
+//            $name = $request->file('images')->getClientOriginalName();
+//
+//
+//            $image_name = $request->file('images')->getRealPath();
+//
+//            Cloudder::upload($image_name, null);
+//
+//            list($width, $height) = getimagesize($image_name);
+//
+//            $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+//            $imageId= Cloudder::getPublicId();
+//            //save to uploads directory
+//            $images->move(public_path("uploads"), $name);
+//
+//            //Save images
+//
+//
+//
+//            $article->images = $request->file('images')->getClientOriginalName();
+//
+//            $article->imagesId = $imageId;
+//            $article->save();
+//
+//
+//
+//        }
+//
 
 
         $validateRequest=  request()->validate([

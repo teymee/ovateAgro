@@ -35,7 +35,7 @@ Route::get('/home',                   'HomeController@index')->name('home')->mid
 
 //ADMIN AREA
 
-Route::get('/admin', function () {
+Route::get('/dashboard', function () {
     $role = auth()->user()->role[0]->name;
 
     if($role == 'admin'|| 'superadmin'){

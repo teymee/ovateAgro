@@ -3,7 +3,7 @@
 @section('banner')
 {{-- REGULAR HOSTING --}}
 {{--{{asset('storage/'.$article->images )}}--}}
-    <div class="hero-wrap js-fullheight" style="background-image: url({{asset('uploads/'.$article->images)}});" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="    background-image: url({{asset('/storage/'.$article->images)}});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -36,7 +36,7 @@
                                 @endforeach
                         </div>
                     </div>
-
+<!-- 
                     <h4>About the Author</h4>
                     <div class="about-author d-flex p-4 bg-light">
 
@@ -44,14 +44,12 @@
                             <img src="/website/images/person_12.jpg" alt="Image placeholder" class="img-fluid mb-4">
                         </div>
                         <div class="desc">
-{{--                            <h3>Kolawole Abdulateef</h3>--}}
-{{--                            <p> Konam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>--}}
 
 
                             <h3>{{ucwords($article->user->name)}}</h3>
                             <p>{{$article->user->about}}</p>
                         </div>
-                    </div>
+                    </div> -->
 
 
 
@@ -108,14 +106,14 @@
 
                 </div> <!-- .col-md-8 -->
                 <div class="col-lg-4 sidebar ftco-animate">
-{{--                    <div class="sidebar-box">--}}
+<!-- {{--                    <div class="sidebar-box">--}}
 {{--                        <form action="#" class="search-form">--}}
 {{--                            <div class="form-group">--}}
 {{--                                <span class="icon icon-search"></span>--}}
 {{--                                <input type="text" class="form-control" placeholder="Type a keyword and hit enter">--}}
 {{--                            </div>--}}
 {{--                        </form>--}}
-{{--                    </div>--}}
+{{--                    </div>--}} -->
                     <div class="sidebar-box ftco-animate">
                         <h3>Categories</h3>
                         <ul class="categories">
@@ -131,11 +129,8 @@
                         @foreach($randomArticles as $randomArticle )
 
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="
-                                /*REGULAR HOSTING*/
-                    {{-- {{asset('/storage/'.$randomArticle->images)}}--}}
-                                         /*CLOUDINARY*/
-                                background-image: url({{asset('uploads/'.$article->images)}});"></a>
+                            <a class="blog-img mr-4" style="background-image: url({{asset('/storage/'.$randomArticle->images)}});"></a>
+{{--{{dd($randomArticle->images)}}--}}
                             <div class="text">
                                 <h3 class="heading"><a href="#">{{$randomArticle->title}}</a></h3>
                                 <div class="meta">
@@ -158,7 +153,7 @@
                         </ul>
                     </div>
 
-                    <div class="sidebar-box subs-wrap">
+                    <!-- <div class="sidebar-box subs-wrap">
                         <h3>Subcribe to our Newsletter</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia</p>
                         <form action="#" class="subscribe-form">
@@ -167,9 +162,9 @@
                                 <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
                             </div>
                         </form>
-                    </div>
+                    </div> -->
 
-{{--                    <div class="sidebar-box ftco-animate">--}}
+<!-- {{--                    <div class="sidebar-box ftco-animate">--}}
 {{--                        <h3>Archives</h3>--}}
 {{--                        <ul class="categories">--}}
 {{--                            <li><a href="#">September 2018 <span>(6)</span></a></li>--}}
@@ -179,7 +174,7 @@
 {{--                            <li><a href="#">May 2018 <span>(5)</span></a></li>--}}
 {{--                            <li><a href="#">April 2018 <span>(3)</span></a></li>--}}
 {{--                        </ul>--}}
-{{--                    </div>--}}
+{{--                    </div>--}} -->
 
 
                     <div class="sidebar-box ftco-animate">

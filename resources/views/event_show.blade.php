@@ -36,7 +36,7 @@
                     </div>
 
 
-                    <div class="about-author d-flex p-4 bg-light">
+                    <!-- <div class="about-author d-flex p-4 bg-light">
                         <div class="bio mr-5">
                             <img src="/website/images/person_12.jpg" alt="Image placeholder" class="img-fluid mb-4">
                         </div>
@@ -44,14 +44,14 @@
                             <h3>George Washington</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
                         </div>
-                    </div>
+                    </div> -->
 
 
 
                     {{--COMMENT SECTION--}}
 
                     <div class="pt-5 mt-5">
-{{--                        <h3 class="mb-5">sombody Comment(s)</h3>--}}
+<!-- {{--                        <h3 class="mb-5">sombody Comment(s)</h3>--}}
 {{--                        <ul class="comment-list">--}}
 
 {{--                            @foreach($article->comment as $comment)--}}
@@ -69,10 +69,10 @@
 {{--                                </li>--}}
 
 {{--                            @endforeach--}}
-{{--                        </ul >--}}
+{{--                        </ul >--}} -->
                         <!-- END comment-list -->
 
-{{--                        <div class="comment-form-wrap pt-5">--}}
+<!-- {{--                        <div class="comment-form-wrap pt-5">--}}
 {{--                            <h3 class="mb-5">Leave a comment</h3>--}}
 {{--                            <form action="/comment" method="post"  class="p-5 bg-light">--}}
 {{--                                @csrf--}}
@@ -92,7 +92,7 @@
 {{--                                </div>--}}
 
 {{--                            </form>--}}
-{{--                        </div>--}}
+{{--                        </div>--}} -->
                     </div>
 
                 </div> <!-- .col-md-8 -->
@@ -100,14 +100,14 @@
 
 
                                 <div class="col-lg-4 sidebar ftco-animate">
-{{--                    <div class="sidebar-box">--}}
+<!-- {{--                    <div class="sidebar-box">--}}
 {{--                        <form action="#" class="search-form">--}}
 {{--                            <div class="form-group">--}}
 {{--                                <span class="icon icon-search"></span>--}}
 {{--                                <input type="text" class="form-control" placeholder="Type a keyword and hit enter">--}}
 {{--                            </div>--}}
 {{--                        </form>--}}
-{{--                    </div>--}}
+{{--                    </div>--}} -->
                     <div class="sidebar-box ftco-animate">
                         <h3>Categories</h3>
                         <ul class="categories">
@@ -123,7 +123,7 @@
                         @foreach($randomArticles as $randomArticle )
 
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
+                                <a class="blog-img mr-4" style= "background-image: url({{asset('/storage/'.$randomArticle->images)}});"></a>
                                 <div class="text">
                                     <h3 class="heading"><a href="#">{{$randomArticle->title}}</a></h3>
                                     <div class="meta">
@@ -146,7 +146,7 @@
                         </ul>
                     </div>
 
-                    <div class="sidebar-box subs-wrap">
+                    <!-- <div class="sidebar-box subs-wrap">
                         <h3>Subcribe to our Newsletter</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia</p>
                         <form action="#" class="subscribe-form">
@@ -155,9 +155,9 @@
                                 <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
                             </div>
                         </form>
-                    </div>
+                    </div> -->
 
-                    <div class="sidebar-box ftco-animate">
+                    <!-- <div class="sidebar-box ftco-animate">
                         <h3>Archives</h3>
                         <ul class="categories">
                             <li><a href="#">September 2018 <span>(6)</span></a></li>
@@ -167,7 +167,7 @@
                             <li><a href="#">May 2018 <span>(5)</span></a></li>
                             <li><a href="#">April 2018 <span>(3)</span></a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
 
                                     <div class="sidebar-box ftco-animate">
