@@ -42,7 +42,7 @@
 <body >
 
 
-<div class="login_body">
+<!-- <div class="login_body">
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form class="login_form" method="POST" action="{{ route('register') }}">
@@ -83,7 +83,7 @@
 
                 <input id="phone" type="text" placeholder="Phone Number"
                        class=" @error('phone') is-invalid @enderror"
-                       name="phone" value="{{ old('phone') }}" autocomplete="phone" autofocus>
+                       name="phone" value="{{ old('phone') }}" autocomplete="phone" autofocus required>
 
                 @error('phone')
                 <span class="invalid-feedback" role="alert" style="display: block">
@@ -94,7 +94,7 @@
 
 
                 <input id="password" type="password" class=" @error('password') is-invalid @enderror"
-                       name="password" required autocomplete="new-password" placeholder="Password">
+                       name="password" required autocomplete="new-password" placeholder="Password" required>
 
                 @error('password')
                 <span class="invalid-feedback" role="alert" style="display: block">
@@ -148,7 +148,7 @@
                 <div class="d-flex">
                     <div class="d-flex justify-content-around" style="margin-right:10px;">
                         <input style="padding: 0; margin: 0; " type="checkbox" name="remember"
-                               id="remember" {{ old('remember') ? 'checked' : '' }}>
+                               id="remember" {{ old('remember') ? 'checked' : '' }} required>
                     </div>
                     <label for="" style="font-size: 12px">Remember me </label>
                 </div>
@@ -171,7 +171,7 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button class="login_button ghost" id="signIn">Sign In</button>
+                    <button class="login_button ghost " id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Welcome to Ovate Agro</h1>
@@ -181,7 +181,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 @extends('layouts.app')
@@ -192,7 +192,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
+                    <div class="card-header card-header-add">{{ __('Login') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
@@ -230,7 +230,7 @@
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <input class="form-check-input"  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} required>
 
                                         <label class="form-check-label" for="remember">
                                             {{ __('Remember Me') }}
@@ -241,7 +241,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button class=login_button type="submit" class="btn btn-primary">
+                                    <button class="login_button" type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
                                     </button class=login_button>
 
@@ -269,14 +269,20 @@
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
     const container = document.getElementById('container');
+    const overLayLeft = document.querySelector('.overlay-right');
+    
 
     signUpButton.addEventListener('click', () => {
         container.classList.add("right-panel-active");
+        // overLayLeft.style.opacity= "translateX(-200%)"
+       
     });
 
     signInButton.addEventListener('click', () => {
         container.classList.remove("right-panel-active");
+        container.classList.add("left-panel-active");
     });
+
 </script>
 </body>
 

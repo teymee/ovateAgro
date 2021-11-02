@@ -143,23 +143,35 @@ body {
     box-sizing: border-box;
 }
 
+.login_body {
+    display: none !important;
+}
+
+.mobile_login {
+    display: block;
+}
+
+.card-header-add{
+    background-color: #c1e07870 !important;
+}
+.card-body form input:focus{
+    border:#c1e078 1px solid !important;
+}
+
+
 @media only screen and (max-width: 700px) {
     .mobile_login {
         display: block !important;
     }
 
-    .login_body {
-        display: none !important;
-    }
+    
 
     .monthly .text {
         font-size: 12px;
     }
 }
 
-.mobile_login {
-    display: none;
-}
+
 .login_body {
     background-color: rgba(175, 213, 87, 0.4);
     display: flex;
@@ -274,7 +286,12 @@ body {
 
 .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
+
 }
+/* .container.left-panel-active .sign-in-container {
+    transform: translateX(100%);
+} */
+
 
 .sign-up-container {
     background: rgb(175, 213, 87) !important;
@@ -370,7 +387,7 @@ body {
         202deg,
         rgba(128, 128, 128, 0.3) 1%,
         rgba(175, 213, 87, 1) 100%
-    );
+    );  
     transform: translateX(-20%);
 }
 
