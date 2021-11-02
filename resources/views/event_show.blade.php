@@ -1,7 +1,8 @@
 @extends('layout.layout')
 
 @section('banner')
-    <div class="hero-wrap js-fullheight" style="background-image: url({{asset('storage/'.$events->images )}});" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('website/images/shop.jpg'); background-size: 300px  "
+     style="background-image: url({{asset('storage/'.$events->images)}});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -29,9 +30,9 @@
                     </article>
                     <div class="tag-widget post-tag-container mb-5 mt-5">
                         <div class="tagcloud">
-{{--                            @foreach($events->tag as $tag)--}}
+<!-- {{--                            @foreach($events->tag as $tag)--}}
 {{--                                <a href="/blog?tag={{$tag->name}}" class="tag-cloud-link"> {{$tag->name}} </a>--}}
-{{--                            @endforeach--}}
+{{--                            @endforeach--}} -->
                         </div>
                     </div>
 

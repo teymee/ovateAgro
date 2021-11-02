@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="website/images/ovate-logo.png" />
+    <!-- <link rel="shortcut icon" href="website/images/ovate-logo.png" /> -->
     <link rel="stylesheet" href="/website/css/flaticon.css ">
     <link rel="stylesheet" href="/website/css/icomoon.css">
     <link rel="stylesheet" href="/website/css/style.css">
@@ -41,17 +41,6 @@
 
 
 
-{{--    <style>--}}
-{{--        @media (max-width: 800px) {--}}
-{{--            .bannenr2{--}}
-{{--                background-image:url(website/images/mobile-headline.jpg) !important;--}}
-
-{{--            }--}}
-{{--            #blog-banner {--}}
-{{--                background-image: url('website/images/bg_34.jpg');--}}
-{{--            }--}}
-{{--        }--}}
-{{--    </style>--}}
 </head>
 <body>
 
@@ -68,7 +57,8 @@
                 <li class="nav-item {{Request::path() === 'shop' ? 'active' : ' '}}"><a href="/shop" class="nav-link">Shop</a></li>
                 <li class="nav-item {{Request::path()  === 'blog' ? 'active' : ''}}"><a href="/blog" class="nav-link">Blog</a></li>
                 <li class="nav-item {{Request::path()  === 'events' ? 'active' : ''}}"><a href="/events" class="nav-link">Event</a></li>
-{{--                <li class="nav-item active dropdown">--}}
+
+                <!-- {{--                <li class="nav-item active dropdown">--}}
 {{--                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>--}}
 {{--                    <div class="dropdown-menu" aria-labelledby="dropdown04">--}}
 {{--                        <a class="dropdown-item" href="index.html">Home with slider</a>--}}
@@ -77,7 +67,8 @@
 {{--                    </div>--}}
 {{--                </li>--}}
 {{--                <li class="nav-item{{Request::path()  === 'blog' ? 'active' : ''}}"><a href="/blog" class="nav-link">Blog</a></li>--}}
-                <li class="nav-item {{Request::path() === 'contact' ? 'active' : ''}}"><a href="/contact" class="nav-link">Contact</a></li>
+                 -->
+<li class="nav-item {{Request::path() === 'contact' ? 'active' : ''}}"><a href="/contact" class="nav-link">Contact</a></li>
 
 
                 @auth()
